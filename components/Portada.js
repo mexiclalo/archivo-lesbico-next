@@ -7,8 +7,6 @@ export default function Portada({ t }) {
   const params = useParams();
   const lang = params?.lang || 'es';
 
-  const imageUrl = "https://res.cloudinary.com/ddwwd00qg/image/upload/f_auto,q_auto,e_blur:100,e_brightness:30,c_limit,w_2000/v1769143702/para_pagina_copia_on8c5e.jpg";
-
   // Estilos limpios
   const heroStyle = {
     backgroundColor: '#291147',
@@ -26,8 +24,7 @@ export default function Portada({ t }) {
     return text.replace(/-/g, '\u2011');
   };
 
-  const titleNoBreak = preventBreak(t.title);
-  const subtitleNoBreak = t.subtitleHtml ? t.subtitleHtml.replace(/-/g, '\u2011') : '';
+  const titleHtmlNoBreak = preventBreak(t.titleHtml);
 
   return (
     <section 
@@ -38,9 +35,31 @@ export default function Portada({ t }) {
       {/* Capas de degradado sutil para dar profundidad */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30"></div>
       
-      <div className="relative text-white text-center max-w-7xl -translate-y-10 md:-translate-y-[90px]">
-        <h1 className="text-xl md:text-4xl font-extrabold uppercase tracking-widest opacity-90 break-keep mb-8 md:mb-12">{titleNoBreak}</h1>
-        <h2 className="text-3xl md:text-6xl italic leading-tight px-4 break-keep" dangerouslySetInnerHTML={{ __html: subtitleNoBreak }}></h2>
+      <div className="relative text-white text-center w-full max-w-[1400px] -translate-y-10 md:-translate-y-[90px] px-4 flex flex-col items-center">
+        {/* Logo AHMFLM-YMY */}
+        <img 
+          src="https://archivolesbico.yanmaria.org/img/AHMLFM-YMY_morado.png" 
+          alt="Logo AHMFLM-YMY" 
+          className="w-[150px] md:w-[200px] h-auto mb-8 drop-shadow-lg"
+        />
+
+        <h1 
+          className="text-lg md:text-2xl font-bold uppercase tracking-[0.15em] leading-tight mb-6"
+          style={{ fontFamily: "'Playfair Display', serif" }}
+          dangerouslySetInnerHTML={{ __html: titleHtmlNoBreak }}
+        >
+        </h1>
+        
+        <h2 className="text-xs md:text-base font-light tracking-[0.25em] uppercase opacity-70 mb-8">
+          {t.subtitleHtml}
+        </h2>
+
+        {/* Imagen Pies Blancos respetando sus píxeles originales */}
+        <img 
+          src="https://archivolesbico.yanmaria.org/img/pies-blancos-baja.png" 
+          alt="Icono Pies" 
+          className="w-auto max-w-[400px] md:max-w-[800px] h-auto opacity-90 drop-shadow-md"
+        />
       </div>
     </section>
   );

@@ -8,7 +8,7 @@ export const es = {
   },
   home: {
     portada: {
-      title: "Archivo histórico del movimiento feminista de lesbianas en México",
+      titleHtml: "Archivo histórico del movimiento<br/>feminista de lesbianas en México",
       subtitleHtml: "Yan María Yaoyólotl (AHMFLM-YMY)",
     },
     coyolxauhqui: {

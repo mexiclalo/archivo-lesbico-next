@@ -7,8 +7,8 @@
     "build": "next build --webpack",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "rm -rf out && npm run build && rsync -avzc -e \"ssh -p 65002\" --chmod=D755,F644 --delete --exclude=\"/css/\" --exclude=\"/Feministas-Socialistas/\" --exclude=\"/img/\" --exclude=\"/video/\" --exclude=\"/Declaracion-lesbiana-CEPAL.pdf\" --exclude=\"/google8413ca08f3574101.html\" --exclude=\"/recuadros.html\" out/ u402560935@82.180.138.219:/home/u402560935/domains/yanmaria.org/public_html/FEMINISMOSOCIALISTA/ && curl -X POST \"https://api.cloudflare.com/client/v4/zones/89b866840ac1307cd9bc7cd260654f6e/purge_cache\" -H \"Authorization: Bearer dghHJmlVjti5tZQAS1LlzGQJoIGngM8Rl5suYkqL\" -H \"Content-Type: application/json\" --data '{\"purge_everything\":true}'",
-    "clean-server": "mkdir -p temp_empty && rsync -avzc -e \"ssh -p 65002\" --delete --exclude=\"/css/\" --exclude=\"/Feministas-Socialistas/\" --exclude=\"/img/\" --exclude=\"/video/\" --exclude=\"/Declaracion-lesbiana-CEPAL.pdf\" --exclude=\"/google8413ca08f3574101.html\" --exclude=\"/recuadros.html\" temp_empty/ u402560935@82.180.138.219:/home/u402560935/domains/yanmaria.org/public_html/FEMINISMOSOCIALISTA/ && rm -rf temp_empty"
+    "deploy": "rm -rf out && npm run build && rsync -avzc -e \"ssh -p 65002\" --chmod=D755,F644 --delete out/ u402560935@82.180.138.219:/home/u402560935/domains/yanmaria.org/public_html/archivo/",
+    "clean-server": "mkdir -p temp_empty && rsync -avzc -e \"ssh -p 65002\" --delete temp_empty/ u402560935@82.180.138.219:/home/u402560935/domains/yanmaria.org/public_html/archivo/ && rm -rf temp_empty"
   },
   "dependencies": {
     "@cloudinary/react": "^1.14.3",

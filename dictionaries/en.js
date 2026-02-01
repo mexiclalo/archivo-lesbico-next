@@ -8,7 +8,7 @@ export const en = {
   },
   home: {
     portada: {
-      title: "Historical archive of the feminist lesbian movement in Mexico",
+      titleHtml: "Historical archive of the feminist lesbian movement<br/>in Mexico",
       subtitleHtml: "Yan María Yaoyólotl (AHMFLM-YMY)",
     },
     coyolxauhqui: {
