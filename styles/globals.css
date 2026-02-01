@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+/* Fix para estabilidad en iOS Firefox/Chrome */
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: white;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  hyphens: none;
+}
+
+@layer components {
+  @keyframes pulse-opacity {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.3;
+    }
+  }
+  .animate-opacity-pulse {
+    animation: pulse-opacity 2.5s ease-in-out infinite;
+  }
+
+  /* Responsive Table to Cards using Grid */
+  @media (max-width: 768px) {
+    #catalogo-table thead {
+      display: none;
+    }
+    #catalogo-table,
+    #catalogo-table tbody,
+    #catalogo-table tr,
+    #catalogo-table td {
+      display: block;
+      width: 100%;
+    }
+    #catalogo-table tr {
+      @apply mb-6 border-2 border-oscuro-1 rounded-lg overflow-hidden shadow-md;
+    }
+    #catalogo-table td {
+      /* Using grid for a 2-column layout inside each cell */
+      @apply grid grid-cols-[35%_1fr] items-center gap-x-4 py-3 px-4 border-b border-oscuro-1/30 text-left;
+    }
+    #catalogo-table tr td:last-child {
+      @apply border-b-0;
+    }
+    #catalogo-table td::before {
+      content: attr(data-label);
+      @apply text-left font-bold uppercase text-black border-r border-oscuro-1/50 h-full flex items-center;
+    }
+    /* Special style for the first cell (author) to act as a header */
+    #catalogo-table tr td:first-child {
+      @apply bg-oscuro-2 text-white text-left p-3 font-bold block;
+    }
+    #catalogo-table tr td:first-child::before {
+      content: "";
+      @apply border-none;
+    }
+  }
+}

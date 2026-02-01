@@ -1,0 +1,40 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Log de depuración de Firebase
+firebase-debug.log
+
+# Dependencias del proyecto
+node_modules
+
+# Archivos de construcción
+dist
+dist-ssr
+*.local
+.next
+out
+
+# Carpeta de caché interna de Firebase CLI
+.firebase/
+
+# Archivos de metadatos de macOS
+.DS_Store
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Carpeta de ejemplos
+EJEMPLO/

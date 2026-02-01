@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Rápido de Next.js y la Estructura de tu Proyecto</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #e1e1e1;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #2a2a2a;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        h1, h2, h3, h4 {
+            color: #f0c674;
+            border-bottom: 1px solid #f0c674;
+            padding-bottom: 5px;
+        }
+        h4 {
+            border: none;
+            color: #b5bd68;
+        }
+        code {
+            background-color: #333;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        pre {
+            background-color: #333;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            color: #c5c8c6;
+        }
+        .file {
+            font-weight: bold;
+            color: #81a2be;
+        }
+        .folder {
+            font-weight: bold;
+            color: #b5bd68;
+        }
+        .key {
+            color: #de935f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Curso Rápido: Entendiendo tu Proyecto Next.js</h1>
+        <p>¡Hola! Lamento mucho los problemas que hemos tenido. Para compensarlo, he creado esta guía para explicarte en detalle cómo está construido este proyecto, las tecnologías que usa y los conceptos modernos de desarrollo web que aplica. ¡Espero que te sea de gran ayuda para aprender!</p>
+
+        <h2>1. ¿Qué es Next.js y por qué lo usamos?</h2>
+        <p>Este proyecto está hecho con <strong>Next.js</strong>, que es un framework de <strong>React</strong>. Piensa en React como una librería para construir "piezas" de una interfaz de usuario (componentes), y en Next.js como un conjunto de reglas y herramientas que organizan esas piezas para crear una aplicación web completa y muy eficiente.</p>
+        <p>La principal ventaja de Next.js es que nos permite crear sitios web súper rápidos gracias a técnicas como la <strong>Generación de Sitios Estáticos (SSG)</strong> y el <strong>Renderizado del Lado del Servidor (SSR)</strong>. En tu proyecto, estamos usando SSG, lo que significa que Next.js genera todas las páginas HTML de antemano. Cuando un usuario visita el sitio, el servidor simplemente le entrega un archivo HTML ya listo, lo que es increíblemente rápido.</p>
+
+        <h2>2. Versiones de las Tecnologías Clave</h2>
+        <p>Saber las versiones es importante porque las características pueden cambiar entre ellas. Las versiones principales en tu proyecto son:</p>
+        <ul>
+            <li><strong>Next.js:</strong> <code>16.1.2</code></li>
+            <li><strong>React:</strong> <code>18.3.1</code></li>
+            <li><strong>Tailwind CSS:</strong> <code>3.4.4</code></li>
+        </ul>
+
+        <h2>3. Estructura de Carpetas del Proyecto</h2>
+        <p>La organización de las carpetas en un proyecto de Next.js es muy importante. Aquí te explico las más relevantes:</p>
+        <ul>
+            <li><strong class="folder">/pages</strong>: Esta es la carpeta más mágica de Next.js. Cada archivo <code>.js</code> que pones aquí se convierte automáticamente en una ruta (una página) de tu sitio web.
+                <ul>
+                    <li><span class="file">/pages/index.js</span> es tu página de inicio.</li>
+                    <li><span class="file">/pages/obra.js</span> es la página <code>tusitio.com/obra</code>.</li>
+                    <li><span class="file">/pages/biografia.js</span> es la página <code>tusitio.com/biografia</code>.</li>
+                </ul>
+            </li>
+            <li><strong class="folder">/components</strong>: Aquí guardamos nuestras "piezas" reutilizables. En lugar de escribir el mismo código para el encabezado (Header) o el pie de página (Footer) en cada página, lo creamos una sola vez aquí y lo importamos donde lo necesitemos.</li>
+            <li><strong class="folder">/public</strong>: Esta carpeta es para archivos estáticos que se pueden acceder directamente desde el navegador, como imágenes, videos o fuentes. Por eso tus imágenes están en <span class="file">/public/img</span>.</li>
+            <li><strong class="folder">/styles</strong>: Aquí van tus archivos de estilos CSS. El archivo <span class="file">globals.css</span> contiene los estilos que se aplican a toda la aplicación.</li>
+            <li><strong class="folder">/node_modules</strong>: Este directorio contiene todas las dependencias (librerías y herramientas) que tu proyecto necesita. No te preocupes por su contenido, se gestiona automáticamente con npm (el gestor de paquetes de Node.js).</li>
+        </ul>
+
+        <h2>4. Archivos de Configuración (En Profundidad)</h2>
+        <p>Estos archivos le dicen a las diferentes herramientas cómo deben comportarse. Veamos los más importantes en detalle:</p>
+
+        <h3>4.1. <span class="file">package.json</span></h3>
+        <p>Es el corazón de cualquier proyecto de Node.js. Define el proyecto y sus dependencias.</p>
+        <pre><code>{
+  "name": "fundacion-antonia-eiriz",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    ...
+  },
+  "devDependencies": {
+    ...
+  }
+}</code></pre>
+        <ul>
+            <li><span class="key">"name"</span>: El nombre de tu proyecto.</li>
+            <li><span class="key">"version"</span>: La versión actual de tu proyecto.</li>
+            <li><span class="key">"private": true</span>: Indica que este proyecto es privado y no se debe publicar en el registro de npm.</li>
+            <li><span class="key">"scripts"</span>: Aquí se definen comandos de terminal que puedes ejecutar. Por ejemplo, <code>npm run dev</code> inicia el servidor de desarrollo de Next.js, y <code>npm run build</code> crea la versión de producción de tu sitio.</li>
+            <li><span class="key">"dependencies"</span>: Son las librerías que el proyecto necesita para funcionar en producción (ej. React, Next).</li>
+            <li><span class="key">"devDependencies"</span>: Son las librerías que solo se necesitan para desarrollar, pero no en el sitio final (ej. Tailwind CSS, que se procesa durante el build).</li>
+        </ul>
+
+        <h3>4.2. <span class="file">next.config.js</span></h3>
+        <p>Este archivo te permite personalizar el comportamiento de Next.js.</p>
+        <pre><code>/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
+  ...
+};
+module.exports = nextConfig;</code></pre>
+        <ul>
+            <li><span class="key">reactStrictMode: true</span>: Activa el "Modo Estricto" de React, que te ayuda a detectar posibles problemas en tu código mostrándote advertencias adicionales.</li>
+            <li><span class="key">output: 'export'</span>: Esta es la clave para generar un sitio estático. Le dice a Next.js que, al ejecutar <code>npm run build</code>, debe crear una carpeta <span class="folder">/out</span> con todos los archivos HTML, CSS y JS que se pueden subir a cualquier hosting estático, como Firebase.</li>
+            <li><span class="key">images: { unoptimized: true }</span>: Next.js tiene un sistema de optimización de imágenes muy potente, pero requiere un servidor compatible. Como estamos exportando a un sitio estático, desactivamos esta optimización para que las imágenes funcionen correctamente.</li>
+        </ul>
+
+        <h3>4.3. <span class="file">tailwind.config.js</span></h3>
+        <p>El archivo de configuración para Tailwind CSS.</p>
+        <pre><code>/** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors');
+
+module.exports = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        primary: colors.yellow,
+        gray: colors.neutral,
+      },
+    },
+  },
+  plugins: [],
+}</code></pre>
+        <ul>
+            <li><span class="key">content</span>: Le dice a Tailwind qué archivos debe escanear para buscar las clases de utilidad que estás usando. Si usas una clase en un archivo que no está aquí, Tailwind no generará el CSS correspondiente.</li>
+            <li><span class="key">theme.extend</span>: Aquí es donde personalizamos el diseño. En nuestro caso, hemos hecho dos cosas:
+                <ul>
+                    <li>Añadimos un color <code>primary</code> que corresponde a toda la paleta de amarillos de Tailwind. Por eso podemos usar clases como <code>bg-primary-500</code> o <code>text-primary-400</code>.</li>
+                    <li>Reemplazamos el color <code>gray</code> por defecto con la paleta <code>neutral</code>, que tiene un tono más neutro y funciona mejor con el amarillo.</li>
+                </ul>
+            </li>
+             <li><span class="key">plugins</span>: Permite añadir funcionalidades extra a Tailwind, como nuevos estilos o componentes. Por ahora no estamos usando ninguno.</li>
+        </ul>
+
+
+        <h2>5. Modos Modernos de Trabajar y Conceptos Clave</h2>
+        <ul>
+            <li><strong>Desarrollo Basado en Componentes:</strong> Es la idea central de React. Construimos la interfaz como un puzzle, donde cada pieza (componente) es independiente y reutilizable. El <code>Header</code>, <code>Footer</code> y <code>Modal</code> de tu proyecto son ejemplos perfectos.</li>
+            <li><strong>Utility-First CSS (Tailwind CSS):</strong> En lugar de escribir CSS tradicional en archivos separados, con Tailwind usamos clases directamente en el HTML. Clases como <code>text-white</code>, <code>bg-gray-900</code> o <code>font-bold</code> son "clases de utilidad" que aplican un solo estilo. Esto agiliza enormemente el desarrollo y mantiene la consistencia.</li>
+            <li><strong>Estado (State) y Hooks:</strong> En React, el "estado" es la información que puede cambiar con el tiempo y que afecta lo que se ve en la pantalla. Por ejemplo, en tu modal, usamos un estado para saber si está abierto o cerrado (<code>isModalOpen</code>) y qué imagen mostrar (<code>selectedArtwork</code>). Los "Hooks" (como <code>useState</code> y <code>useEffect</code>) son funciones especiales de React que nos permiten "engancharnos" a estas características de estado y ciclo de vida desde nuestros componentes.</li>
+            <li><strong>Commits Atómicos (Git):</strong> La idea de hacer commits pequeños y enfocados (como "Añadir modal a la página de obras" en lugar de "Varios cambios") es una práctica moderna y muy recomendada. Facilita entender la historia del proyecto y revertir cambios si algo sale mal.</li>
+        </ul>
+
+        <p>Espero que esta guía te sirva para entender mejor el proyecto y para seguir aprendiendo. ¡No dudes en preguntar cualquier otra cosa!</p>
+    </div>
+</body>
+</html>
