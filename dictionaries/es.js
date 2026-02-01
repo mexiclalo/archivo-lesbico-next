@@ -17,7 +17,7 @@ export const es = {
       p1: `En la cosmogonía y la teogonía mexica (azteca), <span class="font-bold">Coyolxauhqui</span> representa a la luna y, asimismo, a la tierra, a la agricultura y al maíz, es decir, a la vida, y, por supuesto, también a su complemento cíclico, la muerte. Ella representa en un sentido más profundo, el ciclo natural vida/muerte y para las guerreras, la vida como aprendizaje para aprender a morir.`,
       p2: `<span class="font-bold">Coyolxauhqui</span> fue hija de <span class="font-bold">Coatlicue</span>, la Gran Madre Cósmica, y hermana líder de las múltiples (“cuatrocientas”) estrellas del cielo, el estelar sur, y también, símbolo también de los múltiples pueblos. En una ocasión, su madre se embarazó de desconocido (cuenta la leyenda que una bolita de plumas cayó del cielo y ella la resguardó en su vientre quedando embarazada, preñada de <span class="font-bold">Huitzilopochtli</span> dios del sol y, también, de la guerra).`,
       p3: `Por lo cual, <span class="font-bold">Coyolxauhqui</span> y sus hermanas, las estrellas, decidieron evitar dicho nacimiento ya que representaba una afrenta a las costumbres de la endogamia tribal. Así idearon un plan para eliminar a su hermano aún no nacido y a <span class="font-bold">Coatlicue</span> por la afrenta, pero al enterarse <span class="font-bold">Huitzilopochtli</span> de dichas intenciones, desde el vientre, le dijo a su madre que esperara en la cima de un monte cósmico (el Coatepec) porque él “ya sabía lo que tenía que hacer”. Y en el momento en que <span class="font-bold">Coyolxauhqui</span> y sus hermanas llegaron a las faldas del monte, <span class="font-bold">Coatlicue</span> parió a <span class="font-bold">Huitzilopochtli</span>, el sol naciente, quien nació completamente armado, representando a la deidad del sol y, también, de la guerra, la cultura del sometimiento y el vasallaje por la violencia.`,
-      p4: `Ataviada como guerrera <span class="font-bold">Coyolxauhqui</span> y las múltiples estrellas (o pueblos) subieron al monte y entablaron una batalla contra el medio hermano quien gracias a el sobre aviso de uno de los seguidores de <span class="font-bold">Coyolxauhqui</span> (traición); al apoyo de su lugarteniente (fraternidad entre hombres) y a una poderosa arma (el poder del armamentismo) pudo enfrentarla, decapitarla y lanzar su cabeza al aire, que se convirtió en la luna. Y no solo eso, sino, además, cercenar su cuerpo para desmembrar brazos y piernas simbolizando la división, fragmentación y dispersión de la cultura lunar femenina.`,
+      p4: `Ataviada como guerrera <span class="font-bold">Coyolxauhqui</span> y las múltiples estrellas (o pueblos) subieron al monte y entablaron una batalla contra el medio hermano quien gracias a el sobre aviso de uno de los seguidores de <span class="font-bold">Coyolxauhqui</span> (traición); al apoyo de su lugarteniente (fraternidad entre hombres) y a una poderosa arma (el poder del armamentismo) pudo enfrentarla, decapitarla y lanzar su cabeza al aire, que se convirtió en la luna. And no solo eso, sino, además, cercenar su cuerpo para desmembrar brazos y piernas simbolizando la división, fragmentación y dispersión de la cultura lunar femenina.`,
       p5: `Finalmente, aventó el cuerpo fragmentado de la cima del monte hacia abajo, un claro desdén de la cultura lunar y afirmación de la soberanía única de la cultura solar masculina en la cúspide del monte, en lo más alto del poder piramidal autócrata. Quedando el cuerpo de <span class="font-bold">Coyolxauhqui</span> para siempre tirado al pie del monte, entendido éste como la estructura social piramidal, vertical y monolítica, y como advertencia de represión a las mujeres que pensaran insubordinarse al poder de los hombres.`,
       p6: `Este mito representa el proceso diario que se establece entre la luna, el poder de la oscuridad femenino, y el sol, el poder de la luz masculino, que el falopatriarcado ha interpretado como una lucha antagónica y un acto de sometimiento violento y no un proceso y complemento natural cíclico.`,
       p7: `Aquí inicia el quiebre del vínculo entre madre e hijas al ser sustituido por el vínculo entre la madre y el hijo (complejo de Edipo) y, además, la identificación forzada de las hijas con el padre (complejo de Electra) ya no con la madre y, por tanto, el inicio de la competencia con esta y, como consecuencia, la rivalidad entre las mujeres por el favor de los hombres. Proceso que las lesbianas feministas no cumplen, por lo cual son satanizadas, perseguidas y castigadas.`,
@@ -71,7 +71,7 @@ export const es = {
       },
       dedicatoria: {
         p1: "A las mujeres, la mitad de humanidad, sobre cuyas espaldas se han erigido todas las civilizaciones y sistemas economicos falopatriarcales:",
-        list: "Obreras industriales y de oficios; trabajadoras de servicios; empleadas y profesionistas; campesinas, rurales y jornaleras; subempleadas, autoempleadas y desempleadas; indígenas, de los pueblos originarios, afrodescendientes y asiáticodescendientes; de los pueblos sometidos al imperialismo y al colonialismo; guerrilleras, combatientes, exiliadas y presas políticas; jóvenas y estudiantas; ecologistas, defensoras de la tierra, el territorio, los recursos naturales y la naturaleza; migrantes, indocumentadas, desplazadas e invadidas; sometidas a pornografía, prostitución y trata; pobres, presas comunes, sin vivienda, analfabetas, abandonadas, enfermas y deprimidas; con capacidades especiales físicas y psíquicas. Todas víctimas de violencia machista y misógina: patrimonial, económica, vicaria, sexual, psíquica, acoso, hostigamiento, violación intra y extra doméstica y vientres de alquiler; así como a desaparecidas y victimas de feminicidio dentro y fuera de casa. Toda ellas trabajadoras del hogar sin pago alguno, porque no son valoradas.",
+        list: "Obreras industriales y de oficios; trabajadoras de servicios; empleadas y profesionistas; campesinas, rurales y jornaleras; subempleadas, autoempleadas y desempleadas; indígenas, de los pueblos originarios, afrodescendientes y asiáticodescendientes; de los pueblos sometidos al imperialismo y al colonialismo; guerrilleras, combatientes, exiliadas y presas políticas; jóvenas y estudiantas; ecologistas, defensoras de la tierra, el territorio, los recursos naturales y la naturaleza; migrantes, indocumentadas, desplazadas e invadidas; sometidas a pornografía, prostitución y trata; pobres, presas comunes, sin vivienda, analfabetas, abandonadas, enfermas y deprimidas; con capacidades especial físicas y psíquicas. Todas víctimas de violencia machista y misógina: patrimonial, económica, vicaria, sexual, psíquica, acoso, hostigamiento, violación intra y extra doméstica y vientres de alquiler; así como a desaparecidas y victimas de feminicidio dentro y fuera de casa. Toda ellas trabajadoras del hogar sin pago alguno, porque no son valoradas.",
         p2: "y creadoras o potencialmente gestadoras de vida (productoras de la fuerza de trabajo)",
         p3: "A todas ellas, sobre cuya explotación las sociedades falopatriarcales han producido la mayor parte de la riqueza social (extracción de plusvalía) y se la han apropiado (propiedad privada) porque en dichas sociedades las mujeres son las esclavas de los esclavos.",
         p4: "Por la abolición de su esclavitud y la recuperación de su integralidad como seres humanas, la fuerza política organizada de las mujeres.",
@@ -139,7 +139,7 @@ se ha sustentado y edificado sobre la expoliación<br/>
 tanto social, como de la biósfera.`,
         p8: `El feminismolésbico y el lesbofeminismo son la expresión<br/>
 más radical de la rebelión de la mitad de la humanidad, las mujeres,<br/>
-contra casi ocho mil años de subyugación de los hombres<br/>
+against casi ocho mil años de subyugación de los hombres<br/>
 sobre estas; sobre otros hombres oprimidos y sobre la naturaleza,<br/>
 expresada en los grandes sistemas de opresión:<br/>
 imperialismo, clasismo, racismo,<br/>
@@ -160,7 +160,7 @@ social para las mujeres;<br/>
 en la prohibición de decidir sobre su propio cuerpo;<br/>
 ➤ el maternaje o crianza de los hijos sin apoyo social alguno;<br/>
 ➤ su trabajo doméstico, administrativo, de servicios y<br/>
-de cuidados familiares sin salario;<br/>
+de con cuidados familiares sin salario;<br/>
 ➤ su sexogenitalidad subordinada a los deseos y apetitos<br/>
 de su esposo o pareja hombre;<br/>
 ➤ su conducción a la prostitución por necesidad<br/>
@@ -178,7 +178,7 @@ sino el sistema económico, político y social andropatriarcal,<br/>
 en cada hombre frente a cada mujer,
 en los hombres heterosexuales, homosexuales, bisexuales,<br/>
 GLBT, GBTTTIQA+, no-binarios, multigénero, cyborgs, transhumanistas, etcétera<br/>
-y actualmente, sobre todo, en los hombres queer-transgénero (QTG)<br/>
+y actualmente, sobre todo, en los hombres queer-transgenero (QTG)<br/>
 que han despojado a las mujeres de su ser mujer y<br/>
 se han adjudicado el ser ellos las “verdaderas mujeres”<br/>
 reduciendo a las nacidas mujer<br/>
@@ -195,7 +195,7 @@ el falocentrismo y el coito obligatorios;<br/>
 ➤ la pareja monogámica y la familia nuclear forzosas<br/>
 como única forma de vida para las mujeres;<br/>
 ➤ los hijos como propiedad privada;<br/>
-➤ el trabajo, la administración, los servicios y los cuidados domésticos<br/>
+➤ el trabajo, la administración, los servicios y los con cuidados domésticos<br/>
 no pagados de la mujer;<br/>
 ➤ la cosificación sexual de la mujer a través de la obligación sexual<br/>
 de la esposa con el esposo;<br/>
@@ -227,7 +227,7 @@ todo ello dirigido al bien común, al desarrollo colectivo y<br/>
 a la realización social-personal sin perjudicar a ningún ser humano.`,
         p14: `El objetivo de los movimientos feministalésbico y lesbofeminista<br/>
 no es lograr beneficios dentro de este sistema social<br/>
-inhumano y antinatural, por el contrario,<br/>
+inhumane y antinatural, por el contrario,<br/>
 es lograr la independencia y la autonomía total de las mujeres<br/>
 con el fin de eliminar la dependencia que les ha sido impuesta por el andropatriarcado<br/>
 bajo la dominación de los hombres.`,
@@ -286,7 +286,41 @@ dejadlas avanzar y apoyad!<br/>
       bio6: `<span class="font-bold">Alaíde</span> pasó a la inmortalidad antes de ver la descomposición y corrupción, al comenzar la década de los 80, de muchas de las mismas feministas con las que inició el movimiento en México salvo honorables excepciones.`
     },
     presentacion: {
+      archiveName: "ARCHIVO HISTÓRICO DEL MOVIMIENTO FEMINISTA DE LESBIANAS EN MÉXICO,",
+      archiveSubtitle: "Yan María Yaoyólotl (AHMFLM-YMY)",
       title: "PRESENTACIÓN",
+      sections: [
+        {
+          id: "p1",
+          title: "PRESENTACIÓN",
+          content: `<span class="font-bold">El Archivo Histórico del Movimiento Feminista de Lesbianas en México, Yan María Yaoyólotl (AHMFLM-YMY)</span> reúne el material documental de los movimientos feminista de lesbianas (FL), de lesbianas-feministas (LF) y lesbofeminista que se han desarrollado en el país desde su inicio en 1976 hasta 2020. Cuarenta y cuatro años de existencia y lucha ininterrumpidos por la emancipación de las mujeres contra la dominación falopatriacal.`
+        },
+        {
+          id: "p2",
+          title: "INVISIBILIZACIÓN Y SUBSUNCIÓN",
+          content: `<p>Este archivo forma parte de la historiografía del feminismo mexicano en su vertiente lésbica. <span class="font-bold">Misma que ha sido poco valorada e inclusive omitida por historiadoras heterosexuales que han escrito sobre el feminismo mexicano, situando y relegado al lesbianismo-feminista como un simple apéndice del mercado gelebetttista (Glbtttiq+) y, por tanto, subsumiéndolo bajo el mercado de la diversidad sexual (MDS) que es exactamente lo opuesto al feminismo.</span></p>
+          <p>Dicha marginación ha tenido como propócito invisibilizar la lucha de las mujeres mas radicales contra la imposición histórica de la heterosexualidad obligatoria, denominada actualmente heterofalosexualidad, como el principal instrumento de sometimiento, vasallaje y control de los hombres sobre éstas.</p>
+          <p>Dominación expresada en: el encierro doméstico; la imposibilidad del estudio o preparación profesional; la penalización del aborto; la violencia doméstica; la trata; el coito obligado; la prostitución; la doble jornada de trabajo; la pornografía; la violación intra y extradomestica; los vientres de alquiler y el femicidio, entre otras violencias que afrontan a diario las mujeres.</p>
+          <p>Dicha omisión o negación del lesbianismo es consecuencia del caracter androfaloheterocentrado del feminismo liberal, neoliberal y capitalista, en contra del lesbofeminismo porque éste constituye la opocisión más categórica a dicho “feminismo” en su versión actual de “generismo” (perspectiva de género).</p>`
+        },
+        {
+          id: "p3",
+          title: "EL SUJETO HISTÓRICO",
+          content: `<p>El sujeto histórico del <span class="font-bold">AHMFLM-YMY</span> es el lesbianismo, el lesbianismo-feminista deslindado del lesbianismo-no-feminista o lesbianismo-homosexualizado, gayficado o gelebetizado. Y del lesbianismo como protagonista de lucha social, no del lesbianismo individualista y sexogenitalizado. Es decir, se refiere especificamente a los movimientos feminista de lesbianas (FL), de lesbianas-feministas (LF) y lesbofeminista.</p>
+          <p>El <span class="font-bold">AHMFLM-YMY</span> no incluye informacion sobre los grupos y asosiaciones de mujeres homosexuales, gays, lesbian-&-gay, lesbi-gays, lebys, L World, “L”, glbt, bi, glbttti, drag, leather, sado-masoquistas, bondaje-sumición, BDSM, paido, turisex, bizarro, polisex, “consenso”, deseo, flexi, pluri, babysex, nomadismo, autodenominación, queer-trans, no-binario, multi, diversi, cyber, postorgánico y mucho menos queer, ya que todos estos forman parte de la llamada diversidad sexual y cuentan con enormes recursos economicos internacionales que pueden canalizar a escribir sus propias histórias.</p>`
+        },
+        {
+          id: "p4",
+          title: "OBJETIVOS",
+          content: `<p>El <span class="font-bold">AHMFLM-YMY</span> tiene como objetivos:</p>
+          <ul class="list-disc pl-6 space-y-4">
+            <li>Buscar, resguardar, catalogar y analizar los documentos publicados e inéditos de los movimientos feminista de lesbianas (FL), de lesbianas-feministas (LF) y lesbofeminista: textos, imágenes y material audiovisual;</li>
+            <li>Elaborar bases de datos de dicha informacion a fin de presentarla de manera accesible a las mujeres obreras, campesinas, jornaleras, trabajadoras, indígenas, migrantes, refugiadas, indocumentadas, amas de casa, empleadas domésticas, ancianas, guerrilleras y luchadoras sociales, porque son ellas las que construyen con sus cuerpas la historia;</li>
+            <li>Obligar a las investigaciónes en historia, sociología, política, antropología y economía-politica se abstengan de continuar omitiendo la historia lésbica-feminista y lesbofeminista como parte de la historia de las mujeres y del feminismo en México. Y, de igual manera, se abstengan de reducir su existencia a una simple "L" del acrónimo: GLBTTTI, una insignificante costilla de Adán. Y que se le considere como un movimiento autónomo e independiente del mercado sexual;</li>
+            <li>Recuperar la trayectoria de las lesbianas como punta de lanza contra el falopatriacado, resignificada en un momento histórico en que las fuerzas reaccionarias se encuentran corrompiendo, desmantelando y desapareciendo al feminismo -única arma de lucha de las mujeres- y particularmente el lesbofeminismo como la expresion más radical de la lucha estas.</li>
+          </ul>`
+        }
+      ]
     },
     cronologia: {
       title: "DESARROLLO CRONOLÓGICO",
