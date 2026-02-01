@@ -10,7 +10,7 @@ export default function Coyolxauhqui({ t }) {
       id="coyolxauhqui"
       className="w-full py-20 px-6 bg-white font-sans flex flex-col items-center"
     >
-      <div className="max-w-4xl w-full">
+      <div className="max-w-6xl w-full">
         
         {/* Encabezado centrado */}
         <div className="flex flex-col items-center mb-12">

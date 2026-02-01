@@ -31,7 +31,7 @@ export default function Cronologia({ t }) {
       id="cronologia"
       className="w-full py-20 px-6 bg-zinc-50 flex flex-col items-center border-t border-zinc-200"
     >
-      <div className="max-w-5xl w-full flex flex-col items-center">
+      <div className="max-w-6xl w-full flex flex-col items-center">
         
         {/* Encabezado del Archivo */}
         <div className="text-center mb-16 space-y-2">

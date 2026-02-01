@@ -14,7 +14,7 @@ export default function InMemoriam({ t }) {
         color: '#36270A'
       }}
     >
-      <div className="max-w-4xl w-full">
+      <div className="max-w-6xl w-full">
         
         {/* Encabezado del Archivo (Centrado arriba) */}
         <div className="text-center mb-20 space-y-2">

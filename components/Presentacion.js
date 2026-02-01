@@ -16,7 +16,7 @@ export default function Presentacion({ t }) {
       id="presentacion"
       className="w-full py-20 px-6 bg-white flex flex-col items-center border-t border-zinc-100"
     >
-      <div className="max-w-4xl w-full flex flex-col items-center">
+      <div className="max-w-6xl w-full flex flex-col items-center">
         
         {/* Encabezado del Archivo */}
         <div className="text-center mb-16 space-y-2">
@@ -37,7 +37,7 @@ export default function Presentacion({ t }) {
         </h2>
 
         {/* Acordeón de Presentación */}
-        <div className="w-full max-w-3xl space-y-4">
+        <div className="w-full max-w-4xl space-y-4">
           {t.sections && t.sections.map((section) => (
             <div key={section.id} className="border-b border-zinc-100">
               <button 

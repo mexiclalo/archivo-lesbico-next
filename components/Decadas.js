@@ -15,7 +15,7 @@ export default function Decadas({ t }) {
       id="decadas"
       className="w-full py-20 px-6 bg-white flex flex-col items-center border-t border-zinc-100"
     >
-      <div className="max-w-4xl w-full flex flex-col items-center">
+      <div className="max-w-6xl w-full flex flex-col items-center">
         
         {/* Encabezado del Archivo */}
         <div className="text-center mb-16 space-y-2">
