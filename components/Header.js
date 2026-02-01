@@ -42,7 +42,7 @@ export default function Header() {
   };
 
   return (
-    <header className="absolute top-0 w-full z-50 md:bg-black/50 md:backdrop-blur-sm pointer-events-none">
+    <header className="absolute top-0 w-full z-50 md:bg-[#291147]/60 md:backdrop-blur-sm pointer-events-none">
       <div className="container mx-auto px-6 py-4 flex justify-end items-center">
         {/* Logo eliminado para estilo minimalista */}
         
@@ -51,42 +51,42 @@ export default function Header() {
             <Link 
               key={item.name} 
               href={item.href} 
-              className="text-white hover:text-[#DF9438] transition-colors duration-300 text-xs tracking-widest font-medium"
+              className="text-white hover:text-[#A165C8] transition-colors duration-300 text-xs tracking-widest font-medium"
             >
               {item.name}
             </Link>
           ))}
           <div className="flex items-center space-x-3 border-l border-white/20 ml-4 pl-4 text-xs tracking-widest font-medium">
-            <Link href="/es" className={`${lang === 'es' ? 'text-[#DF9438]' : 'text-white/60 hover:text-white'}`}>ES</Link>
+            <Link href="/es" className={`${lang === 'es' ? 'text-[#A165C8]' : 'text-white/60 hover:text-white'}`}>ES</Link>
             <span className="text-white/20">|</span>
-            <Link href="/en" className={`${lang === 'en' ? 'text-[#DF9438]' : 'text-white/60 hover:text-white'}`}>EN</Link>
+            <Link href="/en" className={`${lang === 'en' ? 'text-[#A165C8]' : 'text-white/60 hover:text-white'}`}>EN</Link>
           </div>
         </nav>
 
         <button 
           id="mobile-menu-button" 
           onClick={toggleMenu} 
-          className="md:hidden text-white focus:outline-none bg-black/50 backdrop-blur-sm p-3 rounded-lg border border-white/10 pointer-events-auto"
+          className="md:hidden text-white focus:outline-none bg-[#291147]/60 backdrop-blur-sm p-3 rounded-lg border border-white/10 pointer-events-auto"
         >
           {isMounted && <i id="mobile-menu-icon" className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'} text-xl`}></i>}
         </button>
       </div>
 
       {/* Mobile Menu */}
-      <nav id="mobile-menu" className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden absolute w-full bg-black/90 backdrop-blur-md py-6 px-6 border-t border-white/10 pointer-events-auto`}>
+      <nav id="mobile-menu" className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden absolute w-full bg-[#291147]/95 backdrop-blur-md py-6 px-6 border-t border-white/10 pointer-events-auto`}>
         {currentMenu.map((item) => (
           <Link 
             key={item.name} 
             href={item.href} 
             onClick={closeMenu} 
-            className="block text-white hover:text-[#DF9438] py-3 text-xs tracking-widest font-medium"
+            className="block text-white hover:text-[#A165C8] py-3 text-xs tracking-widest font-medium"
           >
             {item.name}
           </Link>
         ))}
         <div className="flex space-x-6 mt-6 pt-6 border-t border-white/10 text-xs tracking-widest font-medium">
-          <Link href="/es" onClick={closeMenu} className={`${lang === 'es' ? 'text-[#DF9438]' : 'text-white/60'}`}>ESPAÑOL</Link>
-          <Link href="/en" onClick={closeMenu} className={`${lang === 'en' ? 'text-[#DF9438]' : 'text-white/60'}`}>ENGLISH</Link>
+          <Link href="/es" onClick={closeMenu} className={`${lang === 'es' ? 'text-[#A165C8]' : 'text-white/60'}`}>ESPAÑOL</Link>
+          <Link href="/en" onClick={closeMenu} className={`${lang === 'en' ? 'text-[#A165C8]' : 'text-white/60'}`}>ENGLISH</Link>
         </div>
       </nav>
     </header>
