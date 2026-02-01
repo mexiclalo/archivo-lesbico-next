@@ -1,5 +1,6 @@
 import Portada from '../../components/Portada';
 import Coyolxauhqui from '../../components/Coyolxauhqui';
+import Bandera from '../../components/Bandera';
 import InMemoriam from '../../components/InMemoriam';
 import Presentacion from '../../components/Presentacion';
 import Cronologia from '../../components/Cronologia';
@@ -26,6 +27,7 @@ export default async function HomePage({ params }) {
     <>
       <Portada t={dict.home.portada} />
       <Coyolxauhqui t={dict.home.coyolxauhqui} />
+      <Bandera t={dict.home.bandera} />
       <InMemoriam t={dict.home.memoriam} />
       <Presentacion t={dict.home.presentacion} />
       <Cronologia t={dict.home.cronologia} />
