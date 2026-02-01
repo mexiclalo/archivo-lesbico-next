@@ -1,6 +1,7 @@
 import '../../styles/globals.css';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import { getDictionary } from '../../lib/get-dictionary';
 
 export async function generateStaticParams() {
   return [{ lang: 'es' }, { lang: 'en' }];
@@ -39,6 +40,7 @@ export async function generateMetadata({ params }) {
 
 export default async function RootLayout({ children, params }) {
   const { lang } = await params;
+  const dict = await getDictionary(lang);
   
   return (
     <html lang={lang}>
@@ -55,7 +57,7 @@ export default async function RootLayout({ children, params }) {
         <main className="flex-grow">
           {children}
         </main>
-        <Footer />
+        <Footer dict={dict} />
       </body>
     </html>
   );

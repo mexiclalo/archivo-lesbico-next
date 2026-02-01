@@ -177,7 +177,7 @@ but the andropatriarchal economic, political and social system,<br/>
 it materializes in men…<br/>
 in each man in front of each woman,<br/>
 in heterosexual, homosexual, bisexual men,<br/>
-GLBT, GBTTTIQA+, non-binary, multigender, cyborgs, transhumanists, etc.<br/>
+GLBT, GBTTTIQA+, non-binary, multimedia, cyborgs, transhumanists, etc.<br/>
 and currently, above all, in queer-transgender (QTG) men<br/>
 who have stripped women of their being woman and<br/>
 have claimed to be the “true women” themselves,<br/>
@@ -188,7 +188,7 @@ outwardly, on dismantling and abolishing this social system<br/>
 patriarchal capitalist, imperialist, colonialista,<br/>
 racist, ethnocentric, androcentric and ecocidal<br/>
 to establish the foundations of another just system.<br/>
-And inwardly, focus on eradicating the exploitation-oppression<br/>
+And inwardly, focus on heradicating the exploitation-oppression<br/>
 of cada hombre sobre cada mujer, aboliendo:<br/>
 ➤ institutionalized heterosexuality,<br/>
 phallocentrism and mandatory intercourse;<br/>
@@ -323,13 +323,77 @@ let them move forward and support!<br/>
       ]
     },
     cronologia: {
-      title: "CHRONOLOGICAL DEVELOPMENT",
+      archiveName: "HISTORICAL ARCHIVE OF THE FEMINIST LESBIAN MOVEMENT IN MEXICO,",
+      archiveSubtitle: "YAN MARÍA YAOYÓLOTL (AHMFLM-YMY)",
+      title: "CHRONOLOGICAL DEVELOPMENT BY DECADES AND YEARS",
+      p1: "Work on the Chronological Development section has been very slow and occasionally halted due to the fact that it has never had financial resources for its realization, neither in the past nor in the present. For this reason, it has not been possible to carry out the diachronic presentation of all years except for those that make up the second half of the 1970s of the past 20th century, but which are of the greatest historical significance. Due to these circumstances, work will continue in this way year by year as much as possible.",
+      p2: "However, with the purpose of not waiting for all decades to be covered diachronically, the AHMFLM-YMY is publishing selected materials from all years in the Relevant Documents section by virtue of their historical importance or political impact, so that women have basic information to follow the history of the lesbian-feminist and lesbofeminist movements in Mexico in a general way.",
+      clickPurple: "Purple boxes indicate that the diachronic development is complete, with the exception of adding any missing document being worked on or documents that some movement activists find and decide to contribute.",
+      clickLilac: "Lilac boxes indicate that there are loose but very important documents due to their historical relevance or political impact, even though they are not in diachronic order.",
+      tableHeaders: {
+        decades: "DECADES",
+        years: "YEARS"
+      }
     },
     decadas: {
-      title: "DECADES",
+      archiveName: "HISTORICAL ARCHIVE OF THE FEMINIST LESBIAN MOVEMENT IN MEXICO,",
+      archiveSubtitle: "YAN MARÍA YAOYÓLOTL (AHMFLM-YMY)",
+      title: `THE FEMINIST LESBIAN MOVEMENT<br/>
+      THE REVOLUTIONARY DECADES OF THE 50s, 60s AND 70s AND<br/>
+      THE COUNTER-REVOLUTIONARY DECADES OF THE 80s, 90s AND 2000 TO DATE`,
+      p1: "World history develops in periods that express the dynamics of the hegemonic economic systems at an international level and, therefore, of the political, ecological, cultural, sexual and symbolic systems that are built upon them (economy-sex-ethno-eco-politics). But not in a linear or mechanical way but irregular and occasionally in great evolutionary jumps or, also, involutive; however, history does not represent an unconnected development, without directionality, voluntaristic or without meaning as most postmodern thought sees it.",
+      p2: "History can be transformed and directed as Marx thought, or the utopians. The near future history can, and must, be oriented by the oppressed women of the world as a political direction for the emancipation of all the oppressed of the planet. Only possibility to liberate humanity from imperialism and colonialism; classism and capitalism; racism and ethnocentrism; sexism and misogyny and depredation and ecocide, that is, towards the definitive abolition of phallopatriarchy because it is built on the backs of women.",
+      p3: "At the end of the Second World War in 1945 and its continuation in the Cold War, three important decades followed, the 50s, 60s and 70s that were characterized by being deeply revolutionary due to the emergence of great and powerful anti-systemic social movements, from the independence struggles against colonialism and imperialism and the emancipatory struggles against classism and racism, to the liberation struggles against sexism and ecological depredation worldwide.",
+      p4: "The 50s were distinguished mainly by the independence struggles of the colonized countries; the 60s mainly by the anti-racist, youth and student struggles and the 70s especially by the anti-sexist and environmentalist struggles. But the three decades revolved around the great world trend of Europe, Asia, Africa and Latin America towards different types of socialisms. In fact, by the end of the 70s, half of the world was socialist or was trying to build its own version of socialism or communism and even anarchism.",
+      p5: "Faced with the danger represented by these powerful anti-systemic movements for the interests of Great Capital, it initiated a new era of counter-revolutionary reactions in order to halt, dismantle and eliminate them during the decades 80, 90 and 2000 until today. Counter-revolution driven by the economic model of Postmodern Neoliberal Globalization (PNG), whose objective was to shore up the failed capitalist system.",
+      p6: "However, since the decadent, inhumane and ecocidal patriarchal capitalist system could no longer offer anything good or new, it defended its continuity by recycling itself -resetting itself- through the appropriation and dispossession of many of the approaches of previous anti-systemic movements, in order to strengthen itself and to re-subjugate those same movements by cross-dressing as them in order to confuse and disorient by inverting the oppressor/oppressed equation and creating the illusion of the arrival of the world at true freedom expressed in the representative liberal democracy led by the US empire.",
+      p7: "The struggle movement of women -half of humanity- feminism, and as part of it lesbian-feminism and lesbofeminism, is immersed in this reality and outside of it cannot be explained. Context that allows understanding, therefore, the reason why neo-patriarchy neo-capitalism promoted a counter-revolutionary reaction directed specifically against this movement, on the one hand, through gender ideology, gender theory (GT) or genderism, and, on the other hand, through queer ideology, queer theory (QT) or queerism, as the official ideologies of the postmodern neoliberal globalization system (PNG) specifically designed to re-establish and maintain the slavery of women, parallel to the raising of some empowered characters to appear that women had already reached power and were already free and, therefore, feminism was already useless.",
+      decade1970: {
+        title: "1970s DECADE",
+        subtitle: "The rise of the feminist and lesbian feminist movement in Mexico",
+        description: "The 1960s and 1970s of the past 20th century are marked by the intensification of the struggle of the world's peoples against US imperialism; the great progress of the African-American anti-racist movement in the US and the black movement in South Africa; the emergence of radical youth and student movements against the capitalist system, many of them proposing armed struggle; the construction of the first Latin American socialist country in Chile and its annihilation by a military coup led by the CIA; the US failure and defeat in Vietnam; the Israeli war for the suppression of Palestine; the defense of local and regional autonomies, even through armed struggle; the counter-cultural rebellion against the capitalist consumer society and the environmental struggle against the depredation of large transnationals, among others. In this historical context, the first lesbian-feminist organizations began to develop in Mexico.",
+        button: "ENTER"
+      }
+    },
+    documentosPortal: {
+      title: "RELEVANT DOCUMENTS",
+      button: "ENTER"
+    },
+    marchasPortal: {
+      title: "LESBIAN MARCHES",
+      button: "ENTER"
+    },
+    indoafroasiaPortal: {
+      title: "INDOAFROASIALATINOAMÉRICA",
+      button: "ENTER"
+    },
+    eventosPortal: {
+      title: "ANNOUNCEMENTS AND EVENTS",
+      rightTitle: "LESBOFEMINISM: BASIC NOTIONS",
+      rightAuthor: "Menstruadora, Luisa Velázquez Herrera",
+      button: "ENTER"
+    },
+    footer: {
+      pageName: "HISTORICAL ARCHIVE OF THE FEMINIST LESBIAN MOVEMENT IN MEXICO, YAN MARÍA YAOYÓLOTL (AHMFLM-YMY)",
+      quickLinksTitle: "Quick Links",
+      rights: "All rights reserved",
+      contactTitle: "Contact",
+      contactEmail: "archivolesbico@yanmaria.org",
+      copyrightTitle: "COPYRIGHT certificates of AHMFLM-YMY",
+      certificates: [
+        {
+          text: "➤ Copyright certificate. January 30, 2012. Registration number: 03-2012-013009393300-01",
+          url: "https://archivolesbico.yanmaria.org/img/Derechos-de-autor/2012.jpg"
+        },
+        {
+          text: "➤ Modification of the name of the AHMFLM-YMY",
+          url: "https://archivolesbico.yanmaria.org/Modificacion-de-denominacion.html"
+        },
+        {
+          text: "➤ Copyright certificate. June 7, 2023. Registration number: 03-2023-060710332300-01",
+          url: "https://archivolesbico.yanmaria.org/img/Derechos-de-autor/2023.png"
+        }
+      ]
     }
-  },
-  footer: {
-    rights: "All rights reserved",
   }
 };

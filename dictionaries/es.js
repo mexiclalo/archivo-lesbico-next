@@ -66,12 +66,12 @@ export const es = {
         },
         socialista: {
           title: "➤ el FEMINISMO SOCIALISTA de tendencia comunista.",
-          list: "Feminismos: socialistas, comunistas, proletarios, populares, de la igualdad en la diferencia, conejistas autónomos, tercermundistas, marxistas, leninistas, maoístas, trotskistas, hochiminhistas, mariateguistas, espartaquistas, entre otros. mundialistas sin patria, ecofeministas, entre otros."
+          list: "Feminismos: socialistas, conejistas autónomos, tercermundistas, marxistas, leninistas, maoístas, trotskistas, hochiminhistas, mariateguistas, espartaquistas, entre otros. mundialistas sin patria, ecofeministas, entre otros."
         }
       },
       dedicatoria: {
         p1: "A las mujeres, la mitad de humanidad, sobre cuyas espaldas se han erigido todas las civilizaciones y sistemas economicos falopatriarcales:",
-        list: "Obreras industriales y de oficios; trabajadoras de servicios; empleadas y profesionistas; campesinas, rurales y jornaleras; subempleadas, autoempleadas y desempleadas; indígenas, de los pueblos originarios, afrodescendientes y asiáticodescendientes; de los pueblos sometidos al imperialismo y al colonialismo; guerrilleras, combatientes, exiliadas y presas políticas; jóvenas y estudiantas; ecologistas, defensoras de la tierra, el territorio, los recursos naturales y la naturaleza; migrantes, indocumentadas, desplazadas e invadidas; sometidas a pornografía, prostitución y trata; pobres, presas comunes, sin vivienda, analfabetas, abandonadas, enfermas y deprimidas; con capacidades especial físicas y psíquicas. Todas víctimas de violencia machista y misógina: patrimonial, económica, vicaria, sexual, psíquica, acoso, hostigamiento, violación intra y extra doméstica y vientres de alquiler; así como a desaparecidas y victimas de feminicidio dentro y fuera de casa. Toda ellas trabajadoras del hogar sin pago alguno, porque no son valoradas.",
+        list: "Obreras industriales y de oficios; trabajadoras de servicios; empleadas y profesionistas; campesinas, rurales y jornaleras; subempleadas, autoempleadas y desempleadas; indígenas, de los pueblos originarios, afrodescendientes y asiáticodescendientes; de los pueblos sometidos al imperialismo y al colonialismo; guerrilleras, combatientes, exiliadas y presas políticas; jóvenas y estudiantas; ecologistas, defensoras de la tierra, el territorio, los recursos naturales y la naturaleza; migrantes, indocumentadas, desplazadas e invadidas; sometidas a pornografía, prostitución y trata; pobres, presas comunes, sin vivienda, analfabetas, abandonadas, enfermas y deprimidas; con capacidades especiales físicas y psíquicas. Todas víctimas de violencia machista y misógina: patrimonial, económica, vicaria, sexual, psíquica, acoso, hostigamiento, violación intra y extra doméstica y vientres de alquiler; así como a desaparecidas y victimas de feminicidio dentro y fuera de casa. Toda ellas trabajadoras del hogar sin pago alguno, porque no son valoradas.",
         p2: "y creadoras o potencialmente gestadoras de vida (productoras de la fuerza de trabajo)",
         p3: "A todas ellas, sobre cuya explotación las sociedades falopatriarcales han producido la mayor parte de la riqueza social (extracción de plusvalía) y se la han apropiado (propiedad privada) porque en dichas sociedades las mujeres son las esclavas de los esclavos.",
         p4: "Por la abolición de su esclavitud y la recuperación de su integralidad como seres humanas, la fuerza política organizada de las mujeres.",
@@ -139,7 +139,7 @@ se ha sustentado y edificado sobre la expoliación<br/>
 tanto social, como de la biósfera.`,
         p8: `El feminismolésbico y el lesbofeminismo son la expresión<br/>
 más radical de la rebelión de la mitad de la humanidad, las mujeres,<br/>
-against casi ocho mil años de subyugación de los hombres<br/>
+contra casi ocho mil años de subyugación de los hombres<br/>
 sobre estas; sobre otros hombres oprimidos y sobre la naturaleza,<br/>
 expresada en los grandes sistemas de opresión:<br/>
 imperialismo, clasismo, racismo,<br/>
@@ -160,7 +160,7 @@ social para las mujeres;<br/>
 en la prohibición de decidir sobre su propio cuerpo;<br/>
 ➤ el maternaje o crianza de los hijos sin apoyo social alguno;<br/>
 ➤ su trabajo doméstico, administrativo, de servicios y<br/>
-de con cuidados familiares sin salario;<br/>
+de con con cuidados familiares sin salario;<br/>
 ➤ su sexogenitalidad subordinada a los deseos y apetitos<br/>
 de su esposo o pareja hombre;<br/>
 ➤ su conducción a la prostitución por necesidad<br/>
@@ -177,7 +177,7 @@ sino el sistema económico, político y social andropatriarcal,<br/>
 éste se materializa en los hombres…<br/>
 en cada hombre frente a cada mujer,
 en los hombres heterosexuales, homosexuales, bisexuales,<br/>
-GLBT, GBTTTIQA+, no-binarios, multigénero, cyborgs, transhumanistas, etcétera<br/>
+GLBT, GBTTTIQA+, no-binarios, multimedia, cyborgs, transhumanistas, etcétera<br/>
 y actualmente, sobre todo, en los hombres queer-transgenero (QTG)<br/>
 que han despojado a las mujeres de su ser mujer y<br/>
 se han adjudicado el ser ellos las “verdaderas mujeres”<br/>
@@ -188,14 +188,14 @@ al exterior, en desmantelar y abolir este sistema social<br/>
 patriarcal capitalista, imperialista, colonialista,<br/>
 racista, etnocentrista, androcentrista y ecocida<br/>
 para establecer los fundamentos de otro sistema justo.<br/>
-And inwardly, focus on eradicating the exploitation-oppression<br/>
+And inwardly, focus on heradicating the exploitation-oppression<br/>
 of cada hombre sobre cada mujer, aboliendo:<br/>
 ➤ la heterosexualidad institucionalizada,<br/>
 el falocentrismo y el coito obligatorios;<br/>
 ➤ la pareja monogámica y la familia nuclear forzosas<br/>
 como única forma de vida para las mujeres;<br/>
 ➤ los hijos como propiedad privada;<br/>
-➤ el trabajo, la administración, los servicios y los con cuidados domésticos<br/>
+➤ el trabajo, la administración, los servicios y los con con cuidados domésticos<br/>
 no pagados de la mujer;<br/>
 ➤ la cosificación sexual de la mujer a través de la obligación sexual<br/>
 de la esposa con el esposo;<br/>
@@ -227,7 +227,7 @@ todo ello dirigido al bien común, al desarrollo colectivo y<br/>
 a la realización social-personal sin perjudicar a ningún ser humano.`,
         p14: `El objetivo de los movimientos feministalésbico y lesbofeminista<br/>
 no es lograr beneficios dentro de este sistema social<br/>
-inhumane y antinatural, por el contrario,<br/>
+inhumano y antinatural, por el contrario,<br/>
 es lograr la independencia y la autonomía total de las mujeres<br/>
 con el fin de eliminar la dependencia que les ha sido impuesta por el andropatriarcado<br/>
 bajo la dominación de los hombres.`,
@@ -299,20 +299,20 @@ dejadlas avanzar y apoyad!<br/>
           id: "p2",
           title: "INVISIBILIZACIÓN Y SUBSUNCIÓN",
           content: `<p>Este archivo forma parte de la historiografía del feminismo mexicano en su vertiente lésbica. <span class="font-bold">Misma que ha sido poco valorada e inclusive omitida por historiadoras heterosexuales que han escrito sobre el feminismo mexicano, situando y relegado al lesbianismo-feminista como un simple apéndice del mercado gelebetttista (Glbtttiq+) y, por tanto, subsumiéndolo bajo el mercado de la diversidad sexual (MDS) que es exactamente lo opuesto al feminismo.</span></p>
-          <p>Dicha marginación ha tenido como propócito invisibilizar la lucha de las mujeres mas radicales contra la imposición histórica de la heterosexualidad obligatoria, denominada actualmente heterofalosexualidad, como el principal instrumento de sometimiento, vasallaje y control de los hombres sobre éstas.</p>
+          <p>Dicha marginación ha tenido como propócito invisibilizar la lucha de las mujeres mas radicales contra la imposición histórica de la heterosexualidad obligatoria, denominada actualmente heterofalosexualidad, como el principal instrumento de sometimiento, vasallaje y con con control de los hombres sobre éstas.</p>
           <p>Dominación expresada en: el encierro doméstico; la imposibilidad del estudio o preparación profesional; la penalización del aborto; la violencia doméstica; la trata; el coito obligado; la prostitución; la doble jornada de trabajo; la pornografía; la violación intra y extradomestica; los vientres de alquiler y el femicidio, entre otras violencias que afrontan a diario las mujeres.</p>
           <p>Dicha omisión o negación del lesbianismo es consecuencia del caracter androfaloheterocentrado del feminismo liberal, neoliberal y capitalista, en contra del lesbofeminismo porque éste constituye la opocisión más categórica a dicho “feminismo” en su versión actual de “generismo” (perspectiva de género).</p>`
         },
         {
           id: "p3",
           title: "EL SUJETO HISTÓRICO",
-          content: `<p>El sujeto histórico del <span class="font-bold">AHMFLM-YMY</span> es el lesbianismo, el lesbianismo-feminista deslindado del lesbianismo-no-feminista o lesbianismo-homosexualizado, gayficado o gelebetizado. Y del lesbianismo como protagonista de lucha social, no del lesbianismo individualista y sexogenitalizado. Es decir, se refiere especificamente a los movimientos feminista de lesbianas (FL), de lesbianas-feministas (LF) y lesbofeminista.</p>
-          <p>El <span class="font-bold">AHMFLM-YMY</span> no incluye informacion sobre los grupos y asosiaciones de mujeres homosexuales, gays, lesbian-&-gay, lesbi-gays, lebys, L World, “L”, glbt, bi, glbttti, drag, leather, sado-masoquistas, bondaje-sumición, BDSM, paido, turisex, bizarro, polisex, “consenso”, deseo, flexi, pluri, babysex, nomadismo, autodenominación, queer-trans, no-binario, multi, diversi, cyber, postorgánico y mucho menos queer, ya que todos estos forman parte de la llamada diversidad sexual y cuentan con enormes recursos economicos internacionales que pueden canalizar a escribir sus propias histórias.</p>`
+          content: `<p>El sujeto histórico del AHMFLM-YMY es el lesbianismo, el lesbianismo-feminista deslindado del lesbianismo-no-feminista o lesbianismo-homosexualizado, gayficado o gelebetizado. Y del lesbianismo como protagonista de lucha social, no del lesbianismo individualista y sexogenitalizado. Es decir, se refiere especificamente a los movimientos feminista de lesbianas (FL), de lesbianas-feministas (LF) y lesbofeminista.</p>
+          <p>El AHMFLM-YMY no incluye informacion sobre los grupos y asosiaciones de mujeres homosexuales, gays, lesbian-&-gay, lesbi-gays, lebys, L World, “L”, glbt, bi, glbttti, drag, leather, sado-masoquistas, bondaje-sumición, BDSM, paido, turisex, bizarro, polisex, “consenso”, deseo, flexi, pluri, babysex, nomadismo, autodenominación, queer-trans, no-binario, multi, diversi, cyber, postorgánico y mucho menos queer, ya que todos estos forman parte de la llamada diversidad sexual y cuentan con enormes recursos economicos internacionales que pueden canalizar a escribir sus propias histórias.</p>`
         },
         {
           id: "p4",
           title: "OBJETIVOS",
-          content: `<p>El <span class="font-bold">AHMFLM-YMY</span> tiene como objetivos:</p>
+          content: `<p>El AHMFLM-YMY tiene como objetivos:</p>
           <ul class="list-disc pl-6 space-y-4">
             <li>Buscar, resguardar, catalogar y analizar los documentos publicados e inéditos de los movimientos feminista de lesbianas (FL), de lesbianas-feministas (LF) y lesbofeminista: textos, imágenes y material audiovisual;</li>
             <li>Elaborar bases de datos de dicha informacion a fin de presentarla de manera accesible a las mujeres obreras, campesinas, jornaleras, trabajadoras, indígenas, migrantes, refugiadas, indocumentadas, amas de casa, empleadas domésticas, ancianas, guerrilleras y luchadoras sociales, porque son ellas las que construyen con sus cuerpas la historia;</li>
@@ -323,13 +323,77 @@ dejadlas avanzar y apoyad!<br/>
       ]
     },
     cronologia: {
-      title: "DESARROLLO CRONOLÓGICO",
+      archiveName: "ARCHIVO HISTÓRICO DEL MOVIMIENTO FEMINISTA DE LESBIANAS EN MÉXICO,",
+      archiveSubtitle: "YAN MARÍA YAOYÓLOTL (AHMFLM-YMY)",
+      title: "DESARROLLO CRONOLÓGICO POR DÉCADAS Y AÑOS",
+      p1: "Los trabajos de la sección Desarrollo Cronológico han sido muy lentos y en ocasiones frenados debido al hecho de no haber contado nunca ni en el pasado ni en el presente con recursos económicos para su realización. Por esta razón, no se ha podido llevar a cabo la presentación diacrónica de todos los años a excepción de los que integran la segunda mitad de la década 1970 del pasado siglo XX, pero que son los de mayor trascendencia histórica. Debido a estas circunstancias, se continuará trabajando de esta manera año con año en la medida de lo posible.",
+      p2: "Sin embargo, con el propósito de no esperar a que se abarquen todas las décadas diacrónicamente, el AHMFLM-YMY se encuentra publicando en la sección Documentos Relevantes materiales seleccionados de todos los años en virtud de su importancia histórica o impacto político, con el fin de que las mujeres cuenten con información básica para dar seguimiento a la historia de los movimientos de lesbianas-feministas y lesbofeminista en México de manera general.",
+      clickPurple: "Las casillas moradas indican que el desarrollo diacrónico se encuentra completo, con la salvedad de anexar algún documento faltante que se esté trabajando o documentos que algunas militantes del movimiento encuentren y decidan aportar.",
+      clickLilac: "Las casillas lilas indican que se encuentran documentos sueltos pero muy importantes debido a su relevancia histórica o impacto político, a pesar de que no se encuentren en orden diacrónico.",
+      tableHeaders: {
+        decades: "DÉCADAS",
+        years: "AÑOS"
+      }
     },
     decadas: {
-      title: "DÉCADAS",
+      archiveName: "ARCHIVO HISTÓRICO DEL MOVIMIENTO FEMINISTA DE LESBIANAS EN MÉXICO,",
+      archiveSubtitle: "YAN MARÍA YAOYÓLOTL (AHMFLM-YMY)",
+      title: `EL MOVIMIENTO FEMINISTA DE LESBIANAS<br/>
+      LAS REVOLUCIONARIAS DÉCADAS DE LOS 50, 60 Y 70 Y<br/>
+      LAS CONTRARREVOLUCIONARIAS DÉCADAS DE LOS 80, 90 Y 2000 A LA FECHA`,
+      p1: "La historia mundial se desarrolla por períodos que expresan la dinámica de los sistemas económicos hegemónicos a nivel internacional y, por lo tanto, de los sistemas políticos, ecológicos, culturales, sexuales y simbólicos que se edifican sobre ellos (economía-sexo-etno-eco-política). Pero no de manera lineal ni mecánica sino irregular y ocasionalmente a grandes saltos evolutivos o, también, involutivos; sin embargo, la historia no representa un desarrollo inconexo, sin direccionalidad, voluntarista o sin sentido como lo ve la mayor parte del pensamiento posmoderno.",
+      p2: "La historia puede transformarse y direccionarse como pensaba Marx, o los utopistas. La historia próxima futura la pueden, y deben, orientar las mujeres oprimidas del mundo como dirección política para la emancipación de todos los oprimidos del planeta. Única posibilidad de liberar a la humanidad del imperialismo y colonialismo; el clasismo y capitalismo; el racismo y etnocentrismo; el sexismo y misoginia y la depredación y ecocidio, es decir, hacia la abolición definitiva del falopatriarcado porque éste se edifica sobre la espalda de las mujeres.",
+      p3: "Al terminar la Segunda Guerra Mundial en 1945 y su continuación en la Guerra Fría, le siguieron tres importantes décadas, los 50, 60 y los 70 que se caracterizaron por ser profundamente revolucionarias debido al surgimiento de grandes y poderosos movimientos sociales antisistémicos, desde las luchas de independencia contra el colonialismo y el imperialismo y las luchas emancipatorias contra el clasismo y el racismo, hasta las luchas de liberación contra el sexismo y la depredación ecológica a nivel mundial.",
+      p4: "Los 50 se distinguieron principalmente por las luchas de independencia de los países colonizados; los 60 principalmente por las luchas antirracistas, juveniles y estudiantiles y los 70 especialmente por las luchas antisexistas y ecologistas. Pero las tres décadas giraron en torno a la gran tendencia mundial de Europa, Asia, África y Latinoamérica hacia los diferentes tipos de socialismos. De hecho, para finales de los 70, la mitad del mundo era socialista o estaba intentando construir su propia versión de socialismo o de comunismo e inclusive, de anarquismo.",
+      p5: "Ante el peligro que representaron dichos poderosos movimientos antisistémicos para los intereses del Gran Capital, este inició una nueva época de reacciones contrarrevolucionarias con el fin de frenarlos, desarticularlos y eliminarlos durante las décadas 80, 90 y los 2000 hasta la actualidad. Contrarrevolución impulsada por el modelo económico de la Globalización Neoliberal Posmoderna (GNP), cuyo objetivo era apuntalar al fracasado sistema capitalista.",
+      p6: "Sin embargo, dado que el decadente, inhumano y ecocida sistema patriarcal capitalista ya no podía ofrecer nada bueno ni nuevo, defendió su continuidad reciclándose -reseteándose- a través de la apropiación y despojo de muchos de los planteamientos de los movimientos antisistémicas anteriores, con el fin de fortalecerse y de resometer a esos mismos movimientos travistiéndose de ellos mismos a fin de confundir y desorientar invirtiendo la ecuación opresores/oprimidos y creando la ilusión de la llegada del mundo a la verdadera libertad expresada en la democracia liberal representativa liderada por el imperio estadounidense.",
+      p7: "El movimiento de lucha de las mujeres -la mitad de la humanidad- el feminismo, y como parte de éste el lesbianismo-feminista y el lesbofeminismo, se encuentra inmerso en esta realidad y fuera de ella no puede explicarse. Contexto que permite entender, por tanto, la razón por la cual el neopatriarcado neocapitalista impulsó una reacción contrarrevolucionaria dirigida específicamente contra éste movimiento, por un lado, a través de la ideología de género, teoría de género (TG) o generismo, y, por otro lado, a través de la ideología queer, teoría queer (TQ) o queerismo, como las ideologías oficiales del sistema de la globalización neoliberal posmoderna (GNP) diseñadas específicamente para reestablecer y mantener la esclavitud de las mujeres, paralela al encumbramiento de algunas personajas empoderadas para aparentar que las mujeres ya habían llegado al poder y ya eran libres y, por ende, el feminismo ya era inservible.",
+      decade1970: {
+        title: "DÉCADA 1970",
+        subtitle: "El ascenso del movimiento feminista y lésbico feminista en México",
+        description: "Las décadas 1960 y 1970 del pasado siglo XX se encuentran marcadas por la intensificación de la lucha de los pueblos del mundo contra el imperialismo estadounidense; el gran avance del movimiento antirracista afroamericano en EE. UU. y negro en Sudáfrica; la emergencia de radicales movimientos juveniles y estudiantiles contra el sistema capitalista plateando, muchos de ellos, la lucha armada; la construcción del primer país socialista latinoamericano en Chile y su aniquilación por un golpe militar dirigido por la CÍA; el fracaso y derrota estadounidense en Vietnam; la guerra israelí por la supresión de Palestina; la defensa de las autonomías locales y regionales, aún por la vía armada; la rebelión contracultural contra la sociedad de consumo capitalista y la lucha ecologista contra la depredación de las grandes transnacionales, entre otros. En este contexto histórico es que empezaron a desarrollarse las primeras organizaciones de lesbianas-feministas en México.",
+        button: "ENTRAR"
+      }
+    },
+    documentosPortal: {
+      title: "DOCUMENTOS RELEVANTES",
+      button: "ENTRAR"
+    },
+    marchasPortal: {
+      title: "MARCHAS LÉSBICAS",
+      button: "ENTRAR"
+    },
+    indoafroasiaPortal: {
+      title: "INDOAFROASIALATINOAMÉRICA",
+      button: "ENTRAR"
+    },
+    eventosPortal: {
+      title: "ANUNCIOS Y EVENTOS",
+      rightTitle: "LESBOFEMINISMO: NOCIONES BÁSICAS",
+      rightAuthor: "Menstruadora, Luisa Velázquez Herrera",
+      button: "ENTRAR"
+    },
+    footer: {
+      pageName: "ARCHIVO HISTÓRICO DEL MOVIMIENTO FEMINISTA DE LESBIANAS EN MÉXICO, YAN MARÍA YAOYÓLOTL (AHMFLM-YMY)",
+      quickLinksTitle: "Enlaces Rápidos",
+      rights: "Todos los derechos reservados",
+      contactTitle: "Contacto",
+      contactEmail: "archivolesbico@yanmaria.org",
+      copyrightTitle: "CERTIFICADOS de registro público del derecho de autor DEL AHMFLM-YMY",
+      certificates: [
+        {
+          text: "➤ Certificado de registro público del derecho de autor. 30 de enero de 2012. Número de registro: 03-2012-013009393300-01",
+          url: "https://archivolesbico.yanmaria.org/img/Derechos-de-autor/2012.jpg"
+        },
+        {
+          text: "➤ Modificación de la denominación del AHMFLM-YMY",
+          url: "https://archivolesbico.yanmaria.org/Modificacion-de-denominacion.html"
+        },
+        {
+          text: "➤ Certificado de registro público del derecho de autor. 7 de junio de 2023. Número de registro: 03-2023-060710332300-01",
+          url: "https://archivolesbico.yanmaria.org/img/Derechos-de-autor/2023.png"
+        }
+      ]
     }
-  },
-  footer: {
-    rights: "Todos los derechos reservados",
   }
 };
