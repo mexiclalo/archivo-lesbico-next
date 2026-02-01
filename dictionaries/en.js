@@ -21,7 +21,7 @@ export const en = {
       p5: `Finally, he threw the fragmented body from the summit of the mount downwards, a clear disdain for lunar culture and an affirmation of the unique sovereignty of male solar culture at the peak of the mount, at the highest point of autocratic pyramidal power. Leaving <span class="font-bold">Coyolxauhqui's</span> body forever lying at the foot of the mount, understood as the pyramidal, vertical, and monolithic social structure, and as a warning of repression to women who might think of insubordinating to the power of men.`,
       p6: `This myth represents the daily process established between the moon, the power of female darkness, and the sun, the power of male light, which phallopatriarchy has interpreted as an antagonistic struggle and an act of violent subjugation rather than a natural cyclic process and complement.`,
       p7: `Here begins the break of the bond between mother and daughters as it is replaced by the bond between mother and son (Oedipus complex) and, furthermore, the forced identification of daughters with the father (Electra complex) no longer with the mother and, therefore, the beginning of competition with her and, as a consequence, the rivalry between women for the favor of men. A process that lesbian feminists do not fulfill, for which they are demonized, persecuted, and punished.`,
-      p8: `Thus, from a lesbian-feminist perspective, the struggle, defeat, and disarticulation of <span class="font-bold">Coyolxauhqui</span> becomes a myth symbolizing the transition from matriarchy to patriarchy in Mesoamerica. The loss of community and gregarious power centered around women (collective property and the common good), through the impositive establishment of individualistic and ego-centered power focused on men (private property and personal good), remaining as millennial archetypes of the collective unconscious (Jung).`,
+      p8: `Thus, from a lesbian-feminist perspective, the struggle, defeat, and disarticulation of <span class="font-bold">Coyolxauhqui</span> becomes a myth symbolizing the transition from matriarchy to patriarchy in Mesoamérica. The loss of community and gregarious power centered around women (collective property and the common good), through the impositive establishment of individualistic and ego-centered power focused on men (private property and personal good), remaining as millennial archetypes of the collective unconscious (Jung).`,
       p9: `And, consequently, the beginning of the era of colonialism, imperialism, classism, racism, sexism, and ecocide—that is, of human sacrifices (genocide, social exploitation) and the sacrifice of nature (depredation, ecological exploitation). <span class="font-bold underline">Rearticulating Coyolxauhqui and rescuing the community with her sisters (and brothers), that is, the peoples, is one of the fundamental purposes of ethno-eco-communist lesbian-feminism.</span>`,
       p10: `An additional and very current fact is that several authors mention that <span class="font-bold">Huitzilopochtli</span>, upon annihilating <span class="font-bold">Coyolxauhqui</span> and the multiple stars:`,
       p11: `“Stripped them of their attire (their culture); appropriated them (private property); put them on (self-adjudication); incorporated them into his destiny (historical theft) and made of them his own insignias and symbols (their own being and stolen representation)."`,
@@ -230,10 +230,7 @@ is not to achieve benefits within this social system<br/>
 inhumane and unnatural; on the contrary,<br/>
 it is to achieve the total independence and autonomy of women<br/>
 in order to eliminate the dependence that has been imposed on them by andropatriarchy<br/>
-under the domination of men.<br/>
-Their economic, social, political and ecological independence,<br/>
-as well as intellectual, cultural, sexual, psychic,<br/>
-symbolic and spiritual.`,
+under the domination of men.`,
         p15: `Similarly and parallel to the struggle for<br/>
 independence, autonomy and sovereignty:<br/>
 - of peoples regarding colonialism and imperialism;<br/>
@@ -273,7 +270,20 @@ let them move forward and support!<br/>
       }
     },
     memoriam: {
-      title: "IN MEMORIAM, ALAÍDE FOPPA",
+      archiveName: "HISTORICAL ARCHIVE OF THE FEMINIST LESBIAN MOVEMENT IN MEXICO,",
+      archiveSubtitle: "Yan María Yaoyólotl (AHMFLM-YMY)",
+      title: "IN MEMORIAM",
+      subtitle: "ALAÍDE FOPPA",
+      altPhoto: "Photo of Alaíde Foppa",
+      intro: `With the offering of her own life, <span class="font-bold">Alaíde Foppa</span> represents for lesbian-feminists of socialist orientation, the most sensitive expression of the struggle against phallopatriarchal sexist domination, but also imperialist and racist. Therefore, it is irrelevant that she was heterosexual; what is important is that she loved women and fought for their emancipation… and this is true lesbian-feminist love.`,
+      date: `Day of <span class="font-bold">Alaíde Foppa's</span> immortality, December 19, 1980.`,
+      question: `WHO IS ALAÍDE FOPPA?`,
+      bio1: `<span class="font-bold">Alaíde constitutes for Mexican feminists the symbol of congruence and feminist commitment, not only due to her struggle for the emancipation of women but also of indigenous nations and peoples subjected to imperialism.</span>`,
+      bio2: `<span class="font-bold">Alaíde Foppa</span> was one of the most important initiators of feminism in Mexico at the beginning of the 1970s decade. She was born in Barcelona, lived in Argentina, Belgium, Italy, and became a naturalized Guatemalan like her mother; furthermore, she lived in Mexico as a political exile with her family until her death. She was a professor at the Faculties of Philosophy and Letters and of Political and Social Sciences at UNAM, initiating the first women's studies.`,
+      bio3: `In 1972 she inaugurated the first radio program about women, a fundamental promoter of feminism in Mexico, and in 1976 she was the founder of the feminist magazine FEM with Margarita García, the first formal feminist magazine in Latin America, among other important contributions to feminism.`,
+      bio4: `<span class="font-bold">Alaíde</span>, the aristocrat, was part of a family of revolutionaries. Her husband was the founder of the Guatemalan Labor Party who, due to the persecution of military dictatorships, was forced into exile in Mexico. Three of her five children committed themselves to the struggle of the armed people in the Guatemalan guerrilla, to combat the military dictatorships that protected US strategic interests and the European multinationals that seized Guatemala's wonderful natural resources, enslaving the indigenous population.`,
+      bio5: `<span class="font-bold">On December 19, 1980, during a trip she made to Guatemala, the military government of Romero Lucas García, at the direction of the US CIA, ordered her kidnapping, torture, and subsequent murder.</span> International organizations, intellectuals, and feminists from France, the United States, and Mexico demanded she be returned alive; they were not successful.`,
+      bio6: `<span class="font-bold">Alaíde</span> passed into immortality before seeing the decomposition and corruption, at the beginning of the 80s decade, of many of the same feminists with whom she started the movement in Mexico, except for honorable exceptions.`
     },
     presentacion: {
       title: "PRESENTATION",

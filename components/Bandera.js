@@ -36,29 +36,17 @@ export default function Bandera({ t }) {
     <section 
       ref={sectionRef}
       id="bandera"
-      className="relative w-full min-h-[100svh] flex flex-col items-center py-24 gap-16 overflow-visible"
-      style={{ clipPath: 'inset(0 0 0 0)' }} // Contenedor del efecto parallax
+      className="relative w-full min-h-[100svh] flex flex-col items-center justify-center overflow-hidden py-24 gap-16 overflow-visible"
+      style={{ clipPath: 'inset(0 0 0 0)' }}
     >
-      {/* CAPAS DE FONDO FIJAS (Sin interceptar eventos de mouse) */}
       <div className="fixed top-0 left-0 w-full h-full pointer-events-none -z-20">
-        <video
-          ref={videoRef}
-          muted
-          loop
-          playsInline
-          className="w-full h-full object-cover"
-        >
+        <video ref={videoRef} muted loop playsInline className="w-full h-full object-cover">
           <source src="https://archivolesbico.yanmaria.org/Bandera/Video/BANDERA2-2.mp4" type="video/mp4" />
         </video>
       </div>
 
-      <div 
-        className="fixed top-0 left-0 w-full h-full bg-[#291147]/80 pointer-events-none -z-10"
-      ></div>
+      <div className="fixed top-0 left-0 w-full h-full bg-[#291147]/80 pointer-events-none -z-10"></div>
 
-      {/* CONTENIDO (Z-10 para estar por encima) */}
-      
-      {/* Recuadro 1: Sujetos Históricos */}
       <div className="relative z-10 max-w-5xl px-6 w-full">
         <div className="bg-[#291147]/80 backdrop-blur-md border border-white p-8 md:p-16 shadow-2xl rounded-sm text-white text-center">
           <p className="text-sm md:text-base uppercase tracking-widest font-bold mb-8 border-b border-white/20 pb-4 mx-auto max-w-2xl">{t.intro}</p>
@@ -75,7 +63,6 @@ export default function Bandera({ t }) {
         </div>
       </div>
 
-      {/* Recuadro 2: Línea Política */}
       <div className="relative z-10 max-w-5xl px-6 w-full">
         <div className="bg-[#291147]/80 backdrop-blur-md border border-white p-8 md:p-16 shadow-2xl rounded-sm text-white text-center">
           <h3 className="text-lg md:text-xl font-bold mb-10 uppercase tracking-[0.2em] border-b border-white/20 pb-4">{t.lineaPolitica.title}</h3>
@@ -88,7 +75,6 @@ export default function Bandera({ t }) {
         </div>
       </div>
 
-      {/* Recuadro 3: Feminismo Antisistémico */}
       <div className="relative z-10 max-w-5xl px-6 w-full">
         <div className="bg-[#291147]/80 backdrop-blur-md border border-white p-8 md:p-16 shadow-2xl rounded-sm text-white text-center">
           <h3 className="text-lg md:text-xl font-bold mb-4 uppercase tracking-wider">{t.antisistemico.title}</h3>
@@ -107,7 +93,6 @@ export default function Bandera({ t }) {
         </div>
       </div>
 
-      {/* Recuadro 4: Dedicatoria Final */}
       <div className="relative z-10 max-w-5xl px-6 w-full">
         <div className="bg-[#291147]/80 backdrop-blur-md border border-white p-8 md:p-16 shadow-2xl rounded-sm text-white flex flex-col">
           <div className="text-center flex-grow">
@@ -121,7 +106,6 @@ export default function Bandera({ t }) {
         </div>
       </div>
 
-      {/* Poema */}
       <div className="relative z-10 max-w-4xl px-6 w-full text-white text-center">
         <div className="space-y-12 py-12">
           {[t.poema.p1, t.poema.p2, t.poema.p3, t.poema.p4, t.poema.p5].map((para, idx) => (
@@ -131,12 +115,7 @@ export default function Bandera({ t }) {
           {!showFullPoem ? (
             <div className="py-12 flex flex-col items-center gap-6">
               <div className="opacity-40 text-xl tracking-[1em]">--- --- ---</div>
-              <button 
-                onClick={() => setShowFullPoem(true)}
-                className="px-8 py-2 border border-white/30 hover:border-white/60 hover:bg-white/5 transition-all text-xs uppercase tracking-[0.3em] opacity-70 hover:opacity-100"
-              >
-                Ver más
-              </button>
+              <button onClick={() => setShowFullPoem(true)} className="px-8 py-2 border border-white/30 hover:border-white/60 hover:bg-white/5 transition-all text-xs uppercase tracking-[0.3em] opacity-70 hover:opacity-100">Ver más</button>
             </div>
           ) : (
             <div className="space-y-12 animate-in fade-in slide-in-from-top-4 duration-1000">
