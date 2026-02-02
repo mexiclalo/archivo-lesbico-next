@@ -38,3 +38,6 @@ out
 
 # Carpeta de ejemplos
 EJEMPLO/
+
+# Archivos multimedia pesados
+public/cronologia/*/video/

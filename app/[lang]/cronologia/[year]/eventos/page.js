@@ -1,6 +1,9 @@
 import { getDictionary } from '../../../../../lib/get-dictionary';
 import YearPortada from '../../../../../components/YearPortada';
 import Breadcrumbs from '../../../../../components/Breadcrumbs';
+import Timeline from '../../../../../components/Timeline';
+import fs from 'fs';
+import path from 'path';
 
 export async function generateStaticParams() {
   const years = ["1976", "1977"];
@@ -14,47 +17,50 @@ export async function generateStaticParams() {
   return params;
 }
 
+async function getYearData(year) {
+  try {
+    const filePath = path.join(process.cwd(), 'data', 'cronologia', `${year}.json`);
+    if (fs.existsSync(filePath)) {
+      const fileContent = fs.readFileSync(filePath, 'utf8');
+      return JSON.parse(fileContent);
+    }
+  } catch (error) {
+    console.error(`Error loading data for year ${year}:`, error);
+  }
+  return null;
+}
+
 export default async function EventosYearPage({ params }) {
   const { lang, year } = await params;
   const dict = await getDictionary(lang);
   
-  const eventosData = dict.eventosIndex?.[year];
+  const timelineData = await getYearData(year);
 
   const breadcrumbItems = [
     { label: dict.navigation.home, href: '/' },
     { label: year, href: `/cronologia/${year}` },
-    { label: lang === 'es' ? 'Eventos' : 'Events', href: null }
+    { label: lang === 'es' ? 'Índice de Eventos' : 'Events Index', href: null }
   ];
 
   return (
-    <main className="min-h-screen bg-white font-sans text-center relative">
+    <main className="min-h-screen bg-white font-sans relative">
       <Breadcrumbs items={breadcrumbItems} light={true} />
 
-      {/* Portada limpia con solo el año */}
       <YearPortada year={`${year}`} />
       
-      <div className="max-w-6xl mx-auto px-6 py-24 flex flex-col items-center">
-        {eventosData ? (
-          <div className="w-full space-y-16">
-            <h2 
-              className="text-lg md:text-3xl font-bold tracking-[0.2em] uppercase text-[#791E8F]"
-              style={{ fontFamily: "'Playfair Display', serif" }}
-            >
-              {eventosData.title}
-            </h2>
-
-            <div className="text-base md:text-xl leading-relaxed text-justify text-zinc-800 space-y-12 max-w-4xl mx-auto">
-              {eventosData.content ? (
-                <div dangerouslySetInnerHTML={{ __html: eventosData.content }} />
-              ) : (
-                <p className="italic opacity-50 text-center">[ Sin eventos registrados para este año ]</p>
-              )}
-            </div>
+      {/* Contenedor de ancho completo para que las plecas crucen toda la pantalla */}
+      <div className="w-full">
+        {timelineData ? (
+          <div className="w-full">
+            <Timeline data={timelineData} year={year} />
           </div>
         ) : (
-          <div className="text-center py-20">
-            <p className="text-zinc-300 italic">
-              {lang === 'es' ? '[ Sección en construcción ]' : '[ Section under construction ]'}
+          <div className="text-center py-20 px-6">
+            <p className="text-zinc-400 italic text-xl uppercase tracking-widest">
+              {lang === 'es' ? 'ÍNDICE CRONOLÓGICO DE EVENTOS' : 'CHRONOLOGICAL INDEX OF EVENTS'}
+            </p>
+            <p className="text-zinc-300 italic mt-8">
+              {lang === 'es' ? '[ Datos no disponibles para este año ]' : '[ Data not available for this year ]'}
             </p>
           </div>
         )}
