@@ -14,7 +14,7 @@ export default function Timeline({ data, year, ui }) {
     noImage: "Sin imagen"
   };
 
-  const basePath = `/cronologia/${year}`;
+  const basePath = `/cronology/${year}`;
 
   const item2 = data.find(item => item.ID === 2);
   const item3 = data.find(item => item.ID === 3);
@@ -34,7 +34,7 @@ export default function Timeline({ data, year, ui }) {
               ARCHIVO HISTÓRICO DEL MOVIMIENTO FEMINISTA DE LESBIANAS EN MÉXICO,
             </p>
             <p className="text-xs md:text-sm font-medium tracking-[0.2em] uppercase text-zinc-600 opacity-80">
-              Yan María Yaoyólotl (AHMFLM-YMY)
+              Yan María Yaoyólotl <span className="whitespace-nowrap">(AHMFLM-YMY)</span>
             </p>
             <div className="w-16 h-[1px] bg-zinc-200 mx-auto mt-8"></div>
           </div>
@@ -61,11 +61,10 @@ export default function Timeline({ data, year, ui }) {
       {data.map((item, index) => {
         if (item.ID === 1 || item.ID === 2 || item.ID === 3) return null;
 
-        // 1. RENDERIZADO DE PLECAS RESTANTES (4 a 8)
+        // 1. RENDERIZADO DE PLECAS
         for (let i = 4; i <= 8; i++) {
           const plecaKey = `PLECAS_TITULOS_${i}`;
           if (item[plecaKey] && item[plecaKey].trim() !== "") {
-            
             let plecaClasses = "w-full py-12 px-6 text-center tracking-[0.2em] uppercase ";
             let plecaStyle = { fontFamily: "'Playfair Display', serif" };
 
@@ -87,7 +86,7 @@ export default function Timeline({ data, year, ui }) {
           }
         }
 
-        // 2. RENDERIZADO DE MESES (Fondo Color Catálogo #1a0a33)
+        // 2. RENDERIZADO DE MESES
         if (item.PLECA_MESES && item.PLECA_MESES.trim() !== "") {
           return (
             <div key={`mes-${index}`} className="w-full py-12 bg-[#1a0a33] text-center px-6">
@@ -125,7 +124,6 @@ export default function Timeline({ data, year, ui }) {
 
           return (
             <article key={`item-${index}`} className="w-full bg-white border-b border-[#740EBD]/10">
-              
               <div className="md:hidden w-full bg-zinc-50 p-8 text-center space-y-6 border-b border-zinc-100">
                 <h4 className="text-lg font-bold text-[#740EBD] uppercase tracking-wider leading-tight">
                   {item.TITULO_COMENTARIOS}
@@ -156,7 +154,7 @@ export default function Timeline({ data, year, ui }) {
                       href={`${basePath}/pdf/${item.NOMBRE_PARA_IMAGENES}-1.pdf`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-red-700 text-white text-[10px] font-bold uppercase tracking-widest rounded-sm hover:bg-red-800 transition-all shadow-md"
+                      className="flex items-center gap-2 px-6 py-2 bg-red-700 text-white text-[10px] font-bold uppercase tracking-widest rounded-sm hover:bg-red-800 transition-all shadow-md"
                     >
                       <i className="fas fa-file-pdf"></i> {labels.downloadPdf}
                     </a>

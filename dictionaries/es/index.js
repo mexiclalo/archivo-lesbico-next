@@ -16,6 +16,7 @@ import { footer } from './home/footer';
 import { year1976 } from './cronologia/1976';
 import { year1977 } from './cronologia/1977';
 import { decade1970 } from './decadas/1970';
+import { documentos } from './documentos';
 
 export const es = {
   navigation,
@@ -40,5 +41,6 @@ export const es = {
   },
   decadasData: {
     "1970": decade1970
-  }
+  },
+  documentos
 };

@@ -51,7 +51,8 @@ export default function Portada({ t }) {
 
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30"></div>
       
-      <div className="relative z-10 text-white text-center w-full max-w-[1400px] md:-translate-y-[90px] px-4 flex flex-col items-center">
+      {/* Contenedor: Ahora centrado verticalmente sin desplazamientos negativos */}
+      <div className="relative z-10 text-white text-center w-full max-w-[1400px] px-4 flex flex-col items-center">
         <img 
           src="https://archivolesbico.yanmaria.org/img/AHMLFM-YMY_morado.png" 
           alt="Logo AHMFLM-YMY" 

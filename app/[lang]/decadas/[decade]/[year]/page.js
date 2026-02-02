@@ -38,7 +38,7 @@ export default async function YearPage({ params }) {
     <main className="min-h-screen bg-white font-sans relative">
       <Breadcrumbs items={breadcrumbItems} light={true} />
 
-      <YearPortada year={year} subtitle={yearSubtitle} />
+      <YearPortada title={year} subtitle={yearSubtitle} />
       
       <div className="max-w-6xl mx-auto px-6 py-24 flex flex-col items-center">
         {yearData ? (
@@ -59,7 +59,6 @@ export default async function YearPage({ params }) {
                     link.active ? (
                       <Link 
                         key={lIdx}
-                        // CONSTRUCCIÓN DE URL CORREGIDA:
                         href={link.external ? link.href : `/${lang}/decadas/${decade}/${year}${link.href}`}
                         target={link.external ? "_blank" : "_self"}
                         rel={link.external ? "noopener noreferrer" : ""}

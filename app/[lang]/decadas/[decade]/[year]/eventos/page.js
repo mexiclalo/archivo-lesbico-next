@@ -61,8 +61,7 @@ export default async function EventosYearPage({ params }) {
     <main className="min-h-screen bg-white font-sans relative">
       <Breadcrumbs items={breadcrumbItems} light={true} />
 
-      {/* Portada con hgroup: Subtítulo simplificado a "EVENTOS" y Año */}
-      <YearPortada year={`${year}`} subtitle={eventosSubtitle} />
+      <YearPortada title={year} subtitle={eventosSubtitle} />
       
       <div className="w-full">
         {timelineData ? (

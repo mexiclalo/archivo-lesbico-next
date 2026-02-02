@@ -73,7 +73,7 @@ export default async function DecadePage({ params }) {
     <main className="min-h-screen bg-white font-sans relative">
       <Breadcrumbs items={breadcrumbItems} light={true} />
 
-      <YearPortada year={decade} subtitle={subtitleLabel} />
+      <YearPortada title={decade} subtitle={subtitleLabel} />
       
       <div className="max-w-6xl mx-auto px-6 py-24 flex flex-col items-center">
         {decadeData ? (

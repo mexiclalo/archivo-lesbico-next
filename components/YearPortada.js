@@ -2,9 +2,12 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 
-export default function YearPortada({ year, subtitle }) {
+export default function YearPortada({ title, subtitle, bgImage }) {
   const [showArrow, setShowArrow] = useState(true);
   const topRef = useRef(null);
+
+  const defaultBg = "https://archivolesbico.yanmaria.org/img/pantallaGrande/portada/fondo.png";
+  const finalBg = bgImage || defaultBg;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -21,6 +24,16 @@ export default function YearPortada({ year, subtitle }) {
     return () => observer.disconnect();
   }, []);
 
+  const isLongTitle = title && title.length > 4;
+  const titleClasses = isLongTitle 
+    ? "text-4xl md:text-6xl lg:text-7xl" 
+    : "text-7xl md:text-[10rem]";
+
+  // Protegemos el acrónimo en el título si existe
+  const formattedTitle = typeof title === 'string' 
+    ? title.replace("AHMFLM-YMY", '<span class="whitespace-nowrap">AHMFLM-YMY</span>')
+    : title;
+
   return (
     <section 
       className="relative w-full h-screen flex items-center justify-center overflow-hidden"
@@ -28,17 +41,16 @@ export default function YearPortada({ year, subtitle }) {
         background: 'linear-gradient(to bottom, #D1D5DB, #63009B)'
       }}
     >
-      <div className="absolute inset-0 flex items-center justify-center w-full h-full p-8 md:p-16">
+      <div className="absolute inset-0 flex items-center justify-center w-full h-full p-8 md:p-16 translate-y-[15px]">
         <img 
-          src="https://archivolesbico.yanmaria.org/img/pantallaGrande/portada/fondo.png" 
-          alt="Fondo Año" 
+          src={finalBg} 
+          alt="Fondo Portada" 
           className="w-full h-full object-contain"
         />
       </div>
 
       <div ref={topRef} className="absolute top-0 left-0 w-full h-4 pointer-events-none"></div>
       
-      {/* Contenido centrado con margen equilibrado para Playfair Display Italic */}
       <div className="relative z-10 text-white text-center px-4 flex flex-col items-center justify-center">
         <hgroup className="flex flex-col items-center">
           {subtitle && (
@@ -54,19 +66,18 @@ export default function YearPortada({ year, subtitle }) {
           )}
           
           <h1 
-            className="text-7xl md:text-[10rem] font-bold tracking-tight drop-shadow-2xl leading-[0.8]"
+            className={`${titleClasses} font-bold tracking-tight drop-shadow-2xl leading-tight md:leading-[0.8]`}
             style={{ 
               fontFamily: "'Playfair Display', serif",
               fontStyle: "italic",
               textShadow: '0 4px 20px rgba(0,0,0,0.6)'
             }}
+            dangerouslySetInnerHTML={{ __html: formattedTitle }}
           >
-            {year}
           </h1>
         </hgroup>
       </div>
 
-      {/* Flechas de Scroll Indicator */}
       <div className="absolute bottom-10 left-0 w-full flex justify-center pointer-events-none z-20">
         <div 
           className={`flex flex-col items-center transition-all duration-700 ease-in-out
