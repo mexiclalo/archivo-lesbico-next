@@ -13,7 +13,7 @@ export default function DocumentosPortal({ t }) {
   return (
     <section 
       id="documentos-portal"
-      className="relative w-full min-h-[70svh] flex flex-col items-center justify-center overflow-hidden"
+      className="relative w-full py-16 md:py-0 md:min-h-[70svh] flex flex-col items-center justify-center overflow-hidden"
       style={{ 
         background: 'linear-gradient(to bottom, #A165C8, #63009B)'
       }}

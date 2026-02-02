@@ -57,7 +57,7 @@ export default function Presentacion({ t }) {
                 className={`overflow-hidden transition-all duration-500 ease-in-out ${activeSection === section.id ? 'max-h-[2000px] opacity-100 pb-12' : 'max-h-0 opacity-0'}`}
               >
                 <div 
-                  className="text-base leading-relaxed text-justify space-y-6 text-zinc-700 pl-10 md:pl-12"
+                  className="text-base leading-relaxed text-justify space-y-6 text-zinc-700 px-4 md:pl-12"
                   dangerouslySetInnerHTML={{ __html: section.content }}
                 />
               </div>

@@ -13,7 +13,7 @@ export default function IndoafroasiaPortal({ t }) {
   return (
     <section 
       id="indoafroasia-portal"
-      className="relative w-full h-[50svh] flex items-center justify-center overflow-hidden"
+      className="relative w-full py-20 md:py-0 md:min-h-[70svh] flex items-center justify-center overflow-hidden"
     >
       {/* Fondo de Imagen (Cover) */}
       <div 
@@ -27,9 +27,10 @@ export default function IndoafroasiaPortal({ t }) {
       </div>
 
       {/* Contenido */}
-      <div className="relative z-10 flex flex-col items-center text-center space-y-8 px-6">
+      <div className="relative z-10 flex flex-col items-center text-center space-y-10 px-6 w-full">
+        {/* Título: Ajustado a text-xl en móvil para que quepa la palabra larga */}
         <h2 
-          className="text-white text-3xl md:text-5xl font-bold tracking-[0.2em] uppercase drop-shadow-2xl"
+          className="text-white text-xl md:text-5xl font-bold tracking-[0.1em] md:tracking-[0.2em] uppercase drop-shadow-2xl break-words max-w-full"
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
           {t.title}

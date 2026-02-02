@@ -27,9 +27,9 @@ export default function Decadas({ t }) {
           </p>
         </div>
 
-        {/* Título de Sección Largo con Serifa */}
+        {/* Título de Sección Largo: Ajustado para que no se salga en celular */}
         <h2 
-          className="text-lg md:text-2xl font-bold tracking-[0.2em] uppercase mb-16 text-center text-[#791E8F] leading-relaxed"
+          className="text-base md:text-2xl font-bold tracking-[0.1em] md:tracking-[0.2em] uppercase mb-16 text-center text-[#791E8F] leading-relaxed break-words max-w-full"
           style={{ fontFamily: "'Playfair Display', serif" }}
           dangerouslySetInnerHTML={{ __html: t.title }}
         >
@@ -47,7 +47,7 @@ export default function Decadas({ t }) {
         </div>
 
         {/* ENTRADA DÉCADA 1970 */}
-        <div className="w-full max-w-2xl bg-zinc-50 border border-zinc-100 p-10 md:p-16 rounded-sm shadow-sm flex flex-col items-center text-center space-y-10">
+        <div className="w-full max-w-2xl bg-zinc-50 border border-zinc-100 p-6 md:p-16 rounded-sm shadow-sm flex flex-col items-center text-center space-y-10">
           <div className="space-y-4">
             <h3 
               className="text-2xl md:text-4xl font-bold tracking-widest text-[#791E8F]"
@@ -60,8 +60,8 @@ export default function Decadas({ t }) {
             </p>
           </div>
 
-          {/* Nuevo párrafo de contexto */}
-          <p className="text-base leading-relaxed text-justify text-zinc-800 italic opacity-90 border-l-2 border-[#791E8F]/20 pl-6">
+          {/* Texto de contexto: Línea vertical oculta en móvil y padding ajustado */}
+          <p className="text-base leading-relaxed text-justify text-zinc-800 italic opacity-90 border-l-0 md:border-l-2 border-[#791E8F]/20 pl-0 md:pl-6">
             {t.decade1970.description}
           </p>
 

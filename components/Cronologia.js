@@ -68,8 +68,8 @@ export default function Cronologia({ t }) {
           </div>
         </div>
 
-        {/* TABLA CRONOLÓGICA */}
-        <div className="w-full overflow-x-auto mb-16">
+        {/* VISTA DE ESCRITORIO (Tabla) */}
+        <div className="hidden md:block w-full overflow-x-auto mb-16">
           <div className="min-w-[800px] border border-zinc-200 bg-white rounded-sm shadow-sm">
             {/* Headers */}
             <div className="flex border-b border-zinc-200 bg-zinc-50/50 font-bold text-xs tracking-widest uppercase py-4">
@@ -92,7 +92,7 @@ export default function Cronologia({ t }) {
                     
                     if (year === '---') {
                       return (
-                        <div key={yIdx} className="aspect-square md:aspect-auto md:h-10 flex items-center justify-center text-xs font-bold text-zinc-200">
+                        <div key={yIdx} className="h-10 flex items-center justify-center text-xs font-bold text-zinc-200">
                           {year}
                         </div>
                       );
@@ -102,7 +102,7 @@ export default function Cronologia({ t }) {
                       <Link 
                         key={yIdx}
                         href={`/${lang}/cronologia/${year}`}
-                        className="aspect-square md:aspect-auto md:h-10 flex items-center justify-center text-xs font-bold rounded-sm transition-all text-white shadow-md hover:scale-105 active:scale-95"
+                        className="h-10 flex items-center justify-center text-xs font-bold rounded-sm transition-all text-white shadow-md hover:scale-105 active:scale-95"
                         style={{ backgroundColor: isPurple ? colorMorado : colorLila }}
                       >
                         {year}
@@ -110,7 +110,7 @@ export default function Cronologia({ t }) {
                     ) : (
                       <div 
                         key={yIdx}
-                        className="aspect-square md:aspect-auto md:h-10 flex items-center justify-center text-xs font-bold text-zinc-400 border border-zinc-50"
+                        className="h-10 flex items-center justify-center text-xs font-bold text-zinc-400 border border-zinc-50"
                       >
                         {year}
                       </div>
@@ -122,7 +122,55 @@ export default function Cronologia({ t }) {
           </div>
         </div>
 
-        {/* Texto Pendiente Sutil Dinámico */}
+        {/* VISTA MÓVIL (Cards) */}
+        <div className="md:hidden w-full space-y-8 mb-12">
+          {rows.map((row, idx) => (
+            <div key={idx} className="bg-white border border-zinc-200 rounded-sm shadow-sm overflow-hidden">
+              {/* Cabecera de la Década */}
+              <div className="bg-zinc-100 px-4 py-3 border-b border-zinc-200 flex justify-between items-center">
+                <span className="text-xs font-bold tracking-widest text-zinc-500 uppercase">{t.tableHeaders.decades}</span>
+                <span className="text-lg font-bold text-[#791E8F]">{row.decade}</span>
+              </div>
+              
+              {/* Grid de Años (5 columnas para que quepan bien) */}
+              <div className="p-4 grid grid-cols-5 gap-2">
+                {row.years.map((year, yIdx) => {
+                  const isPurple = purpleYears.includes(year);
+                  const isLilac = lilacYears.includes(year);
+                  const isActive = isPurple || isLilac;
+                  
+                  if (year === '---') {
+                    return (
+                      <div key={yIdx} className="aspect-square flex items-center justify-center text-[10px] font-bold text-zinc-200">
+                        {year}
+                      </div>
+                    );
+                  }
+
+                  return isActive ? (
+                    <Link 
+                      key={yIdx}
+                      href={`/${lang}/cronologia/${year}`}
+                      className="aspect-square flex items-center justify-center text-xs font-bold rounded-sm text-white shadow-sm active:scale-95"
+                      style={{ backgroundColor: isPurple ? colorMorado : colorLila }}
+                    >
+                      {year}
+                    </Link>
+                  ) : (
+                    <div 
+                      key={yIdx}
+                      className="aspect-square flex items-center justify-center text-xs font-bold text-zinc-400 bg-zinc-50/50 border border-zinc-100 rounded-sm"
+                    >
+                      {year}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Texto Pendiente Sutil */}
         <p className="w-full text-center text-xs md:text-sm italic opacity-40 uppercase tracking-widest pt-8 border-t border-zinc-200">
           {t.pendingText}
         </p>

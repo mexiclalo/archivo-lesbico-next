@@ -68,7 +68,8 @@ export default function Coyolxauhqui({ t }) {
             <h3 className="text-lg md:text-xl font-bold mb-8 tracking-wide text-center">
               {t.interpretationsTitle}
             </h3>
-            <div className="flex flex-wrap justify-center gap-x-6 gap-y-4 text-center max-w-4xl">
+            {/* Lista: Columna centrada en móvil, Wrap en escritorio */}
+            <div className="flex flex-col md:flex-row md:flex-wrap items-center md:justify-center gap-x-6 gap-y-4 text-center max-w-4xl">
               {t.perspectivas.map((p, idx) => (
                 <div key={idx} className="flex items-center gap-2 whitespace-nowrap">
                   <span className="text-lg">➤</span>

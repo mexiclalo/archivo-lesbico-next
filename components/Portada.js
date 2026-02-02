@@ -51,7 +51,8 @@ export default function Portada({ t }) {
 
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30"></div>
       
-      <div className="relative z-10 text-white text-center w-full max-w-[1400px] -translate-y-10 md:-translate-y-[90px] px-4 flex flex-col items-center">
+      {/* Contenedor: centrado natural en móvil, desplazamiento hacia arriba en desktop */}
+      <div className="relative z-10 text-white text-center w-full max-w-[1400px] md:-translate-y-[90px] px-4 flex flex-col items-center">
         <img 
           src="https://archivolesbico.yanmaria.org/img/AHMLFM-YMY_morado.png" 
           alt="Logo AHMFLM-YMY" 
@@ -69,10 +70,11 @@ export default function Portada({ t }) {
           {t.subtitleHtml}
         </h2>
 
+        {/* Imagen Pies Blancos: Oculta en móvil, visible en escritorio */}
         <img 
           src="https://archivolesbico.yanmaria.org/img/pies-blancos-baja.png" 
           alt="Icono Pies" 
-          className="w-auto max-w-[400px] md:max-w-[800px] h-auto opacity-90 drop-shadow-md"
+          className="hidden md:block w-auto max-w-[800px] h-auto opacity-90 drop-shadow-md"
         />
       </div>
 

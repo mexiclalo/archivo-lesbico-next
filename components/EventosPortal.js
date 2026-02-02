@@ -13,13 +13,13 @@ export default function EventosPortal({ t }) {
   return (
     <section 
       id="eventos-portal"
-      className="relative w-full min-h-[70svh] flex flex-col md:flex-row overflow-hidden"
+      className="relative w-full md:min-h-[70svh] flex flex-col md:flex-row overflow-hidden"
       style={{ 
         background: 'linear-gradient(to bottom, #A165C8, #63009B)'
       }}
     >
       {/* COLUMNA IZQUIERDA (70%): Anuncios y Eventos */}
-      <div className="w-full md:w-[70%] p-8 md:p-16 flex flex-col items-center justify-center text-center space-y-12 border-r border-white/10">
+      <div className="w-full md:w-[70%] p-8 md:p-16 flex flex-col items-center justify-center text-center space-y-12 border-b md:border-b-0 md:border-r border-white/10">
         
         {/* Título */}
         <h2 
@@ -47,10 +47,10 @@ export default function EventosPortal({ t }) {
         </Link>
       </div>
 
-      {/* COLUMNA DERECHA (30%): Nociones Básicas (Padding reducido para imagen más grande) */}
-      <div className="w-full md:w-[30%] p-4 md:p-6 flex flex-col items-center justify-center text-center space-y-8 bg-black/10">
+      {/* COLUMNA DERECHA (30%): Nociones Básicas */}
+      <div className="w-full md:w-[30%] p-8 md:p-6 flex flex-col items-center justify-center text-center space-y-8 bg-black/10">
         
-        {/* Imagen que parpadea ocupando más espacio */}
+        {/* Imagen que parpadea */}
         <div className="w-full max-w-[450px] relative">
           <img 
             src="https://archivolesbico.yanmaria.org/Documentos-relevantes/img/LESBOFEMINISMO-NOCIONES_BASICAS.jpg"
