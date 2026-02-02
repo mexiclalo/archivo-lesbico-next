@@ -17,16 +17,16 @@ export async function generateStaticParams() {
   return params;
 }
 
-export default async function Decade1970Page({ params }) {
+export default async function DecadePage({ params }) {
   const { lang, decade } = await params;
   const dict = await getDictionary(lang);
   
-  const decadeData = dict.decadasData?.["1970"];
+  const decadeData = dict.decadasData?.[decade];
 
   const breadcrumbItems = [
     { label: dict.navigation.home, href: '/' },
     { label: lang === 'es' ? 'Décadas' : 'Decades', href: null },
-    { label: "1970", href: null }
+    { label: decade, href: null }
   ];
 
   const HistoryBlock = ({ block }) => (
@@ -39,14 +39,28 @@ export default async function Decade1970Page({ params }) {
           {block.title}
         </h2>
       )}
+      
       {block.subtitle && (
-        <div className="text-left space-y-2 max-w-5xl mx-auto">
-          <h3 className="text-base md:text-lg font-bold italic text-zinc-500 uppercase tracking-widest leading-relaxed">
-            {block.subtitle}
-          </h3>
-          <div className="w-12 h-[1px] bg-[#8C0DC2] opacity-30"></div>
+        <div className="text-left space-y-2 max-w-5xl mx-auto group">
+          {block.href ? (
+            /* Subtítulo con Enlace: Flecha normal, texto en cursiva */
+            <Link 
+              href={`/${lang}${block.href}`}
+              className="inline-flex items-center gap-2 text-base md:text-lg font-bold text-[#8C0DC2] uppercase tracking-widest leading-relaxed hover:text-[#791E8F] transition-all"
+            >
+              <span className="text-[#8C0DC2] group-hover:translate-x-1 transition-transform not-italic">➤</span>
+              <span className="italic">{block.subtitle}</span>
+            </Link>
+          ) : (
+            /* Subtítulo normal: Todo en cursiva */
+            <h3 className="text-base md:text-lg font-bold italic text-zinc-500 uppercase tracking-widest leading-relaxed">
+              {block.subtitle}
+            </h3>
+          )}
+          <div className="w-12 h-[1px] bg-[#8C0DC2] opacity-30 transition-all group-hover:w-24 group-hover:opacity-100"></div>
         </div>
       )}
+
       <div className="text-base md:text-xl leading-relaxed text-justify text-zinc-800 space-y-8 max-w-5xl mx-auto">
         {block.paragraphs.map((p, idx) => (
           <p key={idx}>{p}</p>
@@ -59,22 +73,20 @@ export default async function Decade1970Page({ params }) {
     <main className="min-h-screen bg-white font-sans relative">
       <Breadcrumbs items={breadcrumbItems} light={true} />
 
-      <YearPortada year="1970" />
+      <YearPortada year={decade} />
       
       <div className="max-w-6xl mx-auto px-6 py-24 flex flex-col items-center">
         {decadeData ? (
           <div className="w-full space-y-32">
             
-            {/* 1. Narrativa Histórica Inicial */}
             <div className="w-full space-y-12">
               {decadeData.history && decadeData.history.map((block, bIdx) => (
                 <HistoryBlock key={`hist-${bIdx}`} block={block} />
               ))}
             </div>
 
-            {/* 2. TABLA DE ORGANIZACIONES */}
             {decadeData.orgTable && (
-              <div className="pt-12 space-y-12 w-full">
+              <div className="pt-12 space-y-12 w-full flex flex-col items-center">
                 <div className="text-center space-y-4">
                   <h2 
                     className="text-lg md:text-2xl font-bold tracking-[0.2em] uppercase text-[#791E8F]"
@@ -87,10 +99,10 @@ export default async function Decade1970Page({ params }) {
                   </p>
                 </div>
 
-                <div className="w-full overflow-hidden border border-zinc-100 rounded-sm shadow-sm">
-                  <div className="hidden md:flex bg-zinc-50 border-b border-zinc-200 font-bold text-[10px] tracking-widest text-zinc-400">
-                    <div className="w-24 p-4 border-r border-zinc-200 text-center">{decadeData.orgTable.headers.year}</div>
-                    <div className="flex-grow p-4">{decadeData.orgTable.headers.org}</div>
+                <div className="w-full max-w-5xl overflow-hidden border border-zinc-100 rounded-sm shadow-sm bg-zinc-50/30">
+                  <div className="hidden md:flex bg-[#291147] font-bold text-[10px] tracking-[0.3em] text-white/70">
+                    <div className="w-24 p-5 border-r border-white/10 text-center">{decadeData.orgTable.headers.year}</div>
+                    <div className="flex-grow p-5 px-8">{decadeData.orgTable.headers.org}</div>
                   </div>
                   <div className="divide-y divide-zinc-100">
                     {decadeData.orgTable.rows.map((row, rIdx) => (
@@ -109,7 +121,6 @@ export default async function Decade1970Page({ params }) {
               </div>
             )}
 
-            {/* 3. Introducción a los cuatro grupos */}
             <div className="w-full space-y-12">
               {decadeData.groupIntro && decadeData.groupIntro.map((block, bIdx) => (
                 <HistoryBlock key={`group-${bIdx}`} block={block} />

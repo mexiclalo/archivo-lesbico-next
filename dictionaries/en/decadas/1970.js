@@ -22,34 +22,6 @@ export const decade1970 = {
         "In Mexico, the first four lesbian-feminist organizations of the 1970s reflect these international trends: Ákratas (1976), with a radical anarchist separatist feminist approach; Lésbos (1977), liberal feminist; Oikabeth I (1978), socialist feminist; and Lesbianas Feministas (1979), radical socialist feminist.",
         "The last two, Oikabeth I and Lesbianas Socialistas, would face a 'feminist sex war' in Mexico during that same decade from gay women infiltrated into lesbian feminism. Reinforced by the dominant postmodern ideology, they sought to appropriate the lesbian movement against true lesbian-feminists, reviling them as obsolete, backward, prudish, repressed, repressive, and anti-sex—labels similar to those used in the US by the 'pro-sex' factions led by queer figures Gayle Rubin and Pat Califia (currently men) against American feminists."
       ]
-    },
-    {
-      title: "INTRODUCTION TO THE FOUR LESBIAN-FEMINIST GROUPS THAT EMERGED IN MEXICO IN THE 1970s",
-      subtitle: "➤ 1976 ÁKRATAS GROUP 1976-1980",
-      paragraphs: [
-        "The Ákratas group emerged in 1976 and constitutes the proto-history of the lesbian-feminist movement in Mexico. It was the first feminist organization of heterosexual and lesbian women coordinated by the latter. Its political definition was radical anarchist separatist feminism, in the 'feminism first' line (FL); anarchist because it focused on the root elimination of the patriarchal system and separatist because it did not believe it was possible to achieve this if women's dependence on men continued. It sought the construction of a new gynecacentric society. It did not link with the homosexual movement as it considered it an extension of the patriarchy."
-      ]
-    },
-    {
-      title: "",
-      subtitle: "➤ 1977 LESBOS GROUP 1977-1979",
-      paragraphs: [
-        "The Lesbos group began in 1977 and was the first specifically lesbian group in Mexico, in the 'lesbianism first' line (LF). Its political definition was liberal. It functioned as a small feminist consciousness-raising group (PGAF) limited to the personal aspect to face and overcome the brutal external lesbianphobic repression of the social system and that which was internalized psychically. It was visible only in events organized by the Coalition of Feminist Women (CMF). It did not link with homosexuals because it still considered them chauvinistic."
-      ]
-    },
-    {
-      title: "",
-      subtitle: "➤ 1978 OIKABETH I ORGANIZATION 1978-1982",
-      paragraphs: [
-        "The Oikabeth organization was founded in 1978, it was the second lesbian feminist group in Mexico and the first one public and with national political impact. Its political definition was socialist feminist. It broke the ground for the public emergence of lesbianism in the country and had an impact on organizations and struggles of the anti-capitalist and pro-socialist left in Mexico and some Latin American countries. It coordinated, without losing its autonomy, actions together with the two great socialist homosexual organizations of the late 70s."
-      ]
-    },
-    {
-      title: "",
-      subtitle: "➤ 1979 SOCIALIST LESBIANS GROUP 1979-1982",
-      paragraphs: [
-        "It was formed in 1979, initially as the current of the same Oikabeth founders to defend the project against the arrival of gay youth who opposed its philosophy and structure. At the end of 1981 it was consolidated as a group and in 1982, facing gay infiltration, it brought Oikabeth I to an end. Its political definition was socialist feminist. It continued fighting against a new enemy: neoliberalism. It coordinated several actions with the socialist homosexual movement and opposed the emergence of the gay right. (There were three Oikabeths)."
-      ]
     }
   ],
   orgTable: {
@@ -80,20 +52,35 @@ export const decade1970 = {
       { year: "1979", name: "WOMEN FOR DIALOGUE (MD)", highlight: false }
     ]
   },
-  sections: [
+  groupIntro: [
     {
-      title: "ORGANIZATIONS",
-      links: [
-        {
-          text: "ÁKRATAS GROUP (1976)",
-          href: "/cronologia/1976",
-          active: true
-        },
-        {
-          text: "LESBOS GROUP (1977)",
-          href: "/cronologia/1977",
-          active: true
-        }
+      title: "INTRODUCTION TO THE FOUR LESBIAN-FEMINIST GROUPS THAT EMERGED IN MEXICO IN THE 1970s",
+      subtitle: "1976 ÁKRATAS GROUP 1976-1980",
+      href: "/decadas/1970/1976",
+      paragraphs: [
+        "The Ákratas group emerged in 1976 and constitutes the proto-history of the lesbian-feminist movement in Mexico. It was the first feminist organization of heterosexual and lesbian women coordinated by the latter. Its political definition was radical anarchist separatist feminism, in the 'feminism first' line (FL); anarchist because it focused on the root elimination of the patriarchal system and separatist because it did not believe it was possible to achieve this if women's dependence on men continued. It sought the construction of a new gynecacentric society. It did not link with the homosexual movement as it considered it an extension of the patriarchy."
+      ]
+    },
+    {
+      title: "",
+      subtitle: "1977 LESBOS GROUP 1977-1979",
+      href: "/decadas/1970/1977",
+      paragraphs: [
+        "The Lesbos group began in 1977 and was the first specifically lesbian group in Mexico, in the 'lesbianism first' line (LF). Its political definition was liberal. It functioned as a small feminist consciousness-raising group (PGAF) limited to the personal aspect to face and overcome the brutal external lesbianphobic repression of the social system and that which was internalized psychically. It was visible only in events organized by the Coalition of Feminist Women (CMF). It did not link with homosexuals because it still considered them chauvinistic."
+      ]
+    },
+    {
+      title: "",
+      subtitle: "1978 OIKABETH I ORGANIZATION 1978-1982",
+      paragraphs: [
+        "The Oikabeth organization was founded in 1978, it was the second lesbian feminist group in Mexico and the first one public and with national political impact. Its political definition was socialist feminist. It broke the ground for the public emergence of lesbianism in the country and had an impact on organizations and struggles of the anti-capitalist and pro-socialist left in Mexico and some Latin American countries. It coordinated, without losing its autonomy, actions together with the two great socialist homosexual organizations of the late 70s."
+      ]
+    },
+    {
+      title: "",
+      subtitle: "1979 SOCIALIST LESBIANS GROUP 1979-1982",
+      paragraphs: [
+        "It was formed in 1979, initially as the current of the same Oikabeth founders to defend the project against the arrival of gay youth who opposed its philosophy and structure. At the end of 1981 it was consolidated as a group and in 1982, facing gay infiltration, it brought Oikabeth I to an end. Its political definition was socialist feminist. It continued fighting against a new enemy: neoliberalism. It coordinated several actions with the socialist homosexual movement and opposed the emergence of the gay right. (There were three Oikabeths)."
       ]
     }
   ],

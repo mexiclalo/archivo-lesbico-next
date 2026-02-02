@@ -30,7 +30,7 @@ export const decade1970 = {
     footerNote: "* Se agradecerán correcciones y faltantes",
     headers: { year: "AÑO", org: "ORGANIZACIÓN / AGRUPACIÓN" },
     rows: [
-      { year: "1969", name: "COMUNICACIÓN, INTERCAMBIO Y DESARROLLO HUMANO EN AMÉRINA LATINA (CIDHAL)", highlight: false },
+      { year: "1969", name: "COMUNICACIÓN, INTERCAMBIO Y DESARROLLO HUMANO EN AMÉRICA LATINA (CIDHAL)", highlight: false },
       { year: "1971", name: "MUJERES EN ACCIÓN SOLIDARIA (MAS)", highlight: false },
       { year: "1973", name: "MOVIMIENTO NACIONAL DE MUJERES (MNM)", highlight: false },
       { year: "1974", name: "MOVIMIENTO DE LIBERACIÓN DE LA MUJER (MLM)", highlight: false },
@@ -55,28 +55,30 @@ export const decade1970 = {
   groupIntro: [
     {
       title: "INTRODUCCIÓN A LOS CUATRO GRUPOS DE LESBIANAS-FEMINISTAS QUE SURGIERON EN MÉXICO EN LA DÉCADA 1970",
-      subtitle: "➤ 1976 GRUPO ÁKRATAS 1976-1980",
+      subtitle: "1976 GRUPO ÁKRATAS 1976-1980",
+      href: "/decadas/1970/1976",
       paragraphs: [
-        "El grupo Ákratas surgió in 1976 y constituye la protohistoria del movimiento de lesbianas-feministas en México. Fue la primera organización feminista de mujeres heterosexuales y lesbianas coordinada por las últimas. Su definición política fue el feminismo radical anarquista separatista, en la línea feminismo primero, feminist first (FL); anarquista porque se centraba en la eliminación de raíz del sistema patriarcal y separatista porque no creía que fuera posible lograrlo si continuaba la dependencia de las mujeres a los hombres. Buscaba la construcción de una nueva sociedad ginecocéntrica. No se vinculó con el movimiento homosexual por considerar que era una extensión del patriarcado."
+        "El grupo Ákratas surgió en 1976 y constituye la protohistoria del movimiento de lesbianas-feministas en México. Fue la primera organización feminista de mujeres heterosexuales y lesbianas coordinada por las últimas. Su definición política fue el feminismo radical anarquista separatista, en la línea feminismo primero, feminist first (FL); anarquista porque se centraba en la eliminación de raíz del sistema patriarcal y separatista porque no creía que fuera posible lograrlo si continuaba la dependencia de las mujeres a los hombres. Buscaba la construcción de una nueva sociedad ginecocéntrica. No se vinculó con el movimiento homosexual por considerar que era una extensión del patriarcado."
       ]
     },
     {
       title: "",
-      subtitle: "➤ 1977 GRUPO LÉSBOS 1977-1979",
+      subtitle: "1977 GRUPO LÉSBOS 1977-1979",
+      href: "/decadas/1970/1977",
       paragraphs: [
         "El grupo Lésbos inició en 1977 y fue el primer grupo en México específicamente lésbico, en la línea lesbianismo primero, lesbianism first (LF). Su definición política fue liberal. Funcionó como pequeño grupo de autoconciencia feminista (PGAF) limitado al aspecto personal para enfrentar y superar la brutal represión lesbofóbica externa del sistema social e interiorizada psíquicamente. Fue visible únicamente en los eventos organizados por la Coalición de Mujeres Feministas (CMF). No se vinculó con los homosexuales por considerarlos machistas aún."
       ]
     },
     {
       title: "",
-      subtitle: "➤ 1978 ORGANIZACIÓN OIKABETH I 1978-1982",
+      subtitle: "1978 ORGANIZACIÓN OIKABETH I 1978-1982",
       paragraphs: [
         "La organización Oikabeth se fundó en 1978, fue el segundo grupo de lesbianas feministas en México y el primero público y de impacto político nacional. Su definición política fue feminista socialista. Abrió la brecha para la salida a la luz pública del lesbianismo en el país e incidió en organizaciones y luchas de la izquierda anticapitalista y prosocialista en México y algunos países latinoamericanos. Coordinó, sin perder su autonomía, acciones junto con las dos grandes organizaciones homosexuales socialistas de finales de la década de los 70."
       ]
     },
     {
       title: "",
-      subtitle: "➤ 1979 GRUPO LESBIANAS SOCIALISTAS 1979-1982",
+      subtitle: "1979 GRUPO LESBIANAS SOCIALISTAS 1979-1982",
       paragraphs: [
         "Se formó en 1979, inicialmente fue la corriente de las mismas fundadoras de Oikabeth para defender el proyecto frente a la llegada de jóvenes gays que se oponían a su filosofía y estructura. A finales de 1981 se consolidó como grupo y en 1982 ante la infiltración gay dio por terminado a Oikabeth I. Su definición política fue feminista socialista. Continuó luchando contra un nuevo enemigo: el neoliberalismo. Coordinó varias acciones con el movimiento homosexual socialista y se opuso al surgimiento de la derecha gay. (Existieron tres Oikabeths)."
       ]

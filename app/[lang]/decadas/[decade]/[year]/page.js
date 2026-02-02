@@ -1,16 +1,20 @@
 import Link from 'next/link';
-import { getDictionary } from '../../../../lib/get-dictionary';
-import YearPortada from '../../../../components/YearPortada';
-import Breadcrumbs from '../../../../components/Breadcrumbs';
+import { getDictionary } from '../../../../../lib/get-dictionary';
+import YearPortada from '../../../../../components/YearPortada';
+import Breadcrumbs from '../../../../../components/Breadcrumbs';
 
 export async function generateStaticParams() {
-  const years = ["1976", "1977"];
+  const yearsMapping = {
+    "1970": ["1976", "1977"]
+  };
   const langs = ["es", "en"];
-  
   const params = [];
+  
   langs.forEach(lang => {
-    years.forEach(year => {
-      params.push({ lang, year });
+    Object.keys(yearsMapping).forEach(decade => {
+      yearsMapping[decade].forEach(year => {
+        params.push({ lang, decade, year });
+      });
     });
   });
   
@@ -18,13 +22,14 @@ export async function generateStaticParams() {
 }
 
 export default async function YearPage({ params }) {
-  const { lang, year } = await params;
+  const { lang, decade, year } = await params;
   const dict = await getDictionary(lang);
   
   const yearData = dict.years?.[year];
 
   const breadcrumbItems = [
     { label: dict.navigation.home, href: '/' },
+    { label: decade, href: `/decadas/${decade}` },
     { label: year, href: null }
   ];
 
@@ -53,7 +58,8 @@ export default async function YearPage({ params }) {
                     link.active ? (
                       <Link 
                         key={lIdx}
-                        href={link.external ? link.href : `/${lang}${link.href}`}
+                        // Nota: href ahora incluye el prefijo de la década si no es externo
+                        href={link.external ? link.href : `/${lang}/decadas/${decade}${link.href}`}
                         target={link.external ? "_blank" : "_self"}
                         rel={link.external ? "noopener noreferrer" : ""}
                         className="group relative grid grid-cols-[40px_1fr_40px] items-center px-6 py-5 bg-[#8C0DC2] text-white text-[11px] md:text-xs font-bold uppercase tracking-[0.2em] rounded-sm shadow-xl hover:bg-[#791E8F] hover:scale-[1.02] active:scale-95 transition-all border border-white/20 w-full md:w-[800px]"

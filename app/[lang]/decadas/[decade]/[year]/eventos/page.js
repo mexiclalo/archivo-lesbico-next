@@ -1,17 +1,22 @@
-import { getDictionary } from '../../../../../lib/get-dictionary';
-import YearPortada from '../../../../../components/YearPortada';
-import Breadcrumbs from '../../../../../components/Breadcrumbs';
-import Timeline from '../../../../../components/Timeline';
+import { getDictionary } from '../../../../../../lib/get-dictionary';
+import YearPortada from '../../../../../../components/YearPortada';
+import Breadcrumbs from '../../../../../../components/Breadcrumbs';
+import Timeline from '../../../../../../components/Timeline';
 import fs from 'fs';
 import path from 'path';
 
 export async function generateStaticParams() {
-  const years = ["1976", "1977"];
+  const yearsMapping = {
+    "1970": ["1976", "1977"]
+  };
   const langs = ["es", "en"];
   const params = [];
+  
   langs.forEach(lang => {
-    years.forEach(year => {
-      params.push({ lang, year });
+    Object.keys(yearsMapping).forEach(decade => {
+      yearsMapping[decade].forEach(year => {
+        params.push({ lang, decade, year });
+      });
     });
   });
   return params;
@@ -39,14 +44,15 @@ async function getYearData(year, lang) {
 }
 
 export default async function EventosYearPage({ params }) {
-  const { lang, year } = await params;
+  const { lang, decade, year } = await params;
   const dict = await getDictionary(lang);
   
   const timelineData = await getYearData(year, lang);
 
   const breadcrumbItems = [
     { label: dict.navigation.home, href: '/' },
-    { label: year, href: `/cronologia/${year}` },
+    { label: decade, href: `/decadas/${decade}` },
+    { label: year, href: `/decadas/${decade}/${year}` },
     { label: lang === 'es' ? 'Eventos' : 'Events', href: null }
   ];
 
@@ -59,7 +65,6 @@ export default async function EventosYearPage({ params }) {
       <div className="w-full">
         {timelineData ? (
           <div className="w-full">
-            {/* Pasamos dict.ui para las etiquetas traducibles */}
             <Timeline data={timelineData} year={year} ui={dict.ui} />
           </div>
         ) : (
@@ -68,7 +73,7 @@ export default async function EventosYearPage({ params }) {
               {lang === 'es' ? 'ÍNDICE CRONOLÓGICO DE EVENTOS' : 'CHRONOLOGICAL INDEX OF EVENTS'}
             </p>
             <p className="text-zinc-300 italic mt-8">
-              {dict.ui.noEvents}
+              {dict.ui?.noEvents || '[ Datos no disponibles ]'}
             </p>
           </div>
         )}

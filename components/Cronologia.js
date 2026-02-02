@@ -17,6 +17,18 @@ export default function Cronologia({ t }) {
   const purpleYears = ["1976", "1977"];
   const lilacYears = []; 
 
+  // Mapeo de años a su década para las nuevas rutas anidadas
+  const getYearPath = (year) => {
+    const yearInt = parseInt(year);
+    if (yearInt >= 1970 && yearInt < 1980) return `/decadas/1970/${year}`;
+    if (yearInt >= 1980 && yearInt < 1990) return `/decadas/1980/${year}`;
+    if (yearInt >= 1990 && yearInt < 2000) return `/decadas/1990/${year}`;
+    if (yearInt >= 2000 && yearInt < 2010) return `/decadas/2000/${year}`;
+    if (yearInt >= 2010 && yearInt < 2020) return `/decadas/2010/${year}`;
+    if (yearInt >= 2020) return `/decadas/2020/${year}`;
+    return `/cronologia/${year}`;
+  };
+
   const rows = [
     { decade: "1970", years: ["---", "---", "---", "---", "---", "---", "1976", "1977", "1978", "1979"] },
     { decade: "1980", years: ["1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989"] },
@@ -71,13 +83,11 @@ export default function Cronologia({ t }) {
         {/* VISTA DE ESCRITORIO (Tabla) */}
         <div className="hidden md:block w-full overflow-x-auto mb-16">
           <div className="min-w-[800px] border border-zinc-200 bg-white rounded-sm shadow-sm">
-            {/* Headers */}
             <div className="flex border-b border-zinc-200 bg-zinc-50/50 font-bold text-xs tracking-widest uppercase py-4">
               <div className="w-24 px-4 border-r border-zinc-200">{t.tableHeaders.decades}</div>
               <div className="flex-grow px-4 text-center">{t.tableHeaders.years}</div>
             </div>
 
-            {/* Rows */}
             {rows.map((row, idx) => (
               <div key={idx} className="flex border-b border-zinc-100 last:border-0 hover:bg-zinc-50/30 transition-colors">
                 <div className="w-24 px-4 py-6 flex items-center justify-center font-bold text-zinc-500 border-r border-zinc-100">
@@ -101,7 +111,7 @@ export default function Cronologia({ t }) {
                     return isActive ? (
                       <Link 
                         key={yIdx}
-                        href={`/${lang}/cronologia/${year}`}
+                        href={`/${lang}${getYearPath(year)}`}
                         className="h-10 flex items-center justify-center text-xs font-bold rounded-sm transition-all text-white shadow-md hover:scale-105 active:scale-95"
                         style={{ backgroundColor: isPurple ? colorMorado : colorLila }}
                       >
@@ -126,13 +136,11 @@ export default function Cronologia({ t }) {
         <div className="md:hidden w-full space-y-8 mb-12">
           {rows.map((row, idx) => (
             <div key={idx} className="bg-white border border-zinc-200 rounded-sm shadow-sm overflow-hidden">
-              {/* Cabecera de la Década */}
               <div className="bg-zinc-100 px-4 py-3 border-b border-zinc-200 flex justify-between items-center">
                 <span className="text-xs font-bold tracking-widest text-zinc-500 uppercase">{t.tableHeaders.decades}</span>
                 <span className="text-lg font-bold text-[#791E8F]">{row.decade}</span>
               </div>
               
-              {/* Grid de Años (5 columnas para que quepan bien) */}
               <div className="p-4 grid grid-cols-5 gap-2">
                 {row.years.map((year, yIdx) => {
                   const isPurple = purpleYears.includes(year);
@@ -150,7 +158,7 @@ export default function Cronologia({ t }) {
                   return isActive ? (
                     <Link 
                       key={yIdx}
-                      href={`/${lang}/cronologia/${year}`}
+                      href={`/${lang}${getYearPath(year)}`}
                       className="aspect-square flex items-center justify-center text-xs font-bold rounded-sm text-white shadow-sm active:scale-95"
                       style={{ backgroundColor: isPurple ? colorMorado : colorLila }}
                     >
@@ -170,7 +178,7 @@ export default function Cronologia({ t }) {
           ))}
         </div>
 
-        {/* Texto Pendiente Sutil */}
+        {/* Texto Pendiente Sutil Dinámico */}
         <p className="w-full text-center text-xs md:text-sm italic opacity-40 uppercase tracking-widest pt-8 border-t border-zinc-200">
           {t.pendingText}
         </p>
