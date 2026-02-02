@@ -46,12 +46,11 @@ export default function Portada({ t }) {
       className="w-full flex items-center justify-center p-4 font-sans relative overflow-hidden"
       style={heroStyle}
     >
-      {/* Referencia en el tope para ocultar flechas al bajar 1px */}
-      <div ref={topRef} className="absolute top-0 left-0 w-full h-2 pointer-events-none"></div>
+      {/* Referencia en el tope igualada a la de YearPortada (h-4) */}
+      <div ref={topRef} className="absolute top-0 left-0 w-full h-4 pointer-events-none"></div>
 
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30"></div>
       
-      {/* Contenedor: centrado natural en móvil, desplazamiento hacia arriba en desktop */}
       <div className="relative z-10 text-white text-center w-full max-w-[1400px] md:-translate-y-[90px] px-4 flex flex-col items-center">
         <img 
           src="https://archivolesbico.yanmaria.org/img/AHMLFM-YMY_morado.png" 
@@ -70,7 +69,6 @@ export default function Portada({ t }) {
           {t.subtitleHtml}
         </h2>
 
-        {/* Imagen Pies Blancos: Oculta en móvil, visible en escritorio */}
         <img 
           src="https://archivolesbico.yanmaria.org/img/pies-blancos-baja.png" 
           alt="Icono Pies" 
@@ -78,11 +76,11 @@ export default function Portada({ t }) {
         />
       </div>
 
-      {/* Flechas de Scroll: Blancas, centradas y sin saltos */}
+      {/* Flechas de Scroll Indicator: Igualadas a YearPortada (duration-700 y opacity-90) */}
       <div className="absolute bottom-10 left-0 w-full flex justify-center pointer-events-none z-20">
         <div 
-          className={`flex flex-col items-center transition-all duration-500 ease-in-out
-            ${showArrow ? 'opacity-80' : 'opacity-0 translate-y-10'}`}
+          className={`flex flex-col items-center transition-all duration-700 ease-in-out
+            ${showArrow ? 'opacity-90' : 'opacity-0 translate-y-10'}`}
         >
           <span 
             className="text-3xl md:text-4xl leading-none font-light animate-bounce"

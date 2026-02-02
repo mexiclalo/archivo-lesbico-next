@@ -12,6 +12,10 @@ import { indoafroasiaPortal } from './home/indoafroasiaPortal';
 import { eventosPortal } from './home/eventosPortal';
 import { footer } from './home/footer';
 
+// Importación de años
+import { year1976 } from './cronologia/1976';
+import { year1977 } from './cronologia/1977';
+
 export const es = {
   navigation,
   home: {
@@ -27,5 +31,9 @@ export const es = {
     indoafroasiaPortal,
     eventosPortal,
     footer
+  },
+  years: {
+    "1976": year1976,
+    "1977": year1977
   }
 };
