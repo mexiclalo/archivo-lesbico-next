@@ -25,10 +25,10 @@ export async function generateStaticParams() {
 async function getYearData(year, lang) {
   try {
     const fileName = lang === 'en' ? `${year}_en.json` : `${year}.json`;
-    const filePath = path.join(process.cwd(), 'data', 'cronologia', fileName);
-    
-    if (fs.existsSync(filePath)) {
-      const fileContent = fs.readFileSync(filePath, 'utf8');
+    const realPath = path.join(process.cwd(), 'data', 'cronologia', fileName);
+
+    if (fs.existsSync(realPath)) {
+      const fileContent = fs.readFileSync(realPath, 'utf8');
       return JSON.parse(fileContent);
     } else if (lang === 'en') {
       const esPath = path.join(process.cwd(), 'data', 'cronologia', `${year}.json`);
@@ -48,6 +48,7 @@ export default async function EventosYearPage({ params }) {
   const dict = await getDictionary(lang);
   
   const timelineData = await getYearData(year, lang);
+  const eventosSubtitle = lang === 'es' ? 'EVENTOS' : 'EVENTS';
 
   const breadcrumbItems = [
     { label: dict.navigation.home, href: '/' },
@@ -60,7 +61,8 @@ export default async function EventosYearPage({ params }) {
     <main className="min-h-screen bg-white font-sans relative">
       <Breadcrumbs items={breadcrumbItems} light={true} />
 
-      <YearPortada year={`${year}`} />
+      {/* Portada con hgroup: Subtítulo simplificado a "EVENTOS" y Año */}
+      <YearPortada year={`${year}`} subtitle={eventosSubtitle} />
       
       <div className="w-full">
         {timelineData ? (
@@ -70,7 +72,7 @@ export default async function EventosYearPage({ params }) {
         ) : (
           <div className="text-center py-20 px-6">
             <p className="text-zinc-400 italic text-xl uppercase tracking-widest">
-              {lang === 'es' ? 'ÍNDICE CRONOLÓGICO DE EVENTOS' : 'CHRONOLOGICAL INDEX OF EVENTS'}
+              {eventosSubtitle}
             </p>
             <p className="text-zinc-300 italic mt-8">
               {dict.ui?.noEvents || '[ Datos no disponibles ]'}

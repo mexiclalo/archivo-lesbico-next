@@ -5,7 +5,7 @@ export const year1977 = {
       links: [
         { 
           text: "ÍNDICE CRONOLÓGICO DE EVENTOS", 
-          href: "/cronologia/1977/eventos", 
+          href: "/eventos", 
           active: true 
         },
         { 

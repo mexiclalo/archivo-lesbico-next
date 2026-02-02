@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 
-export default function YearPortada({ year }) {
+export default function YearPortada({ year, subtitle }) {
   const [showArrow, setShowArrow] = useState(true);
   const topRef = useRef(null);
 
@@ -38,17 +38,31 @@ export default function YearPortada({ year }) {
 
       <div ref={topRef} className="absolute top-0 left-0 w-full h-4 pointer-events-none"></div>
       
-      {/* Contenido: Solo el Año en grande */}
-      <div className="relative z-10 text-white text-center px-4">
-        <h1 
-          className="text-8xl md:text-[12rem] font-black tracking-tighter drop-shadow-2xl"
-          style={{ 
-            fontFamily: "'Playfair Display', serif",
-            textShadow: '0 4px 20px rgba(0,0,0,0.6)'
-          }}
-        >
-          {year}
-        </h1>
+      {/* Contenido centrado con margen mínimo extremo entre h2 y h1 */}
+      <div className="relative z-10 text-white text-center px-4 flex flex-col items-center justify-center">
+        <hgroup className="flex flex-col items-center">
+          {subtitle && (
+            <h2 
+              className="text-sm md:text-2xl font-bold uppercase tracking-[0.5em] opacity-80 -mb-4 md:-mb-10"
+              style={{ 
+                fontFamily: "var(--font-roboto), sans-serif",
+                textShadow: '0 2px 10px rgba(0,0,0,0.5)'
+              }}
+            >
+              {subtitle}
+            </h2>
+          )}
+          
+          <h1 
+            className="text-7xl md:text-[10rem] font-black tracking-tighter drop-shadow-2xl leading-none"
+            style={{ 
+              fontFamily: "'Playfair Display', serif",
+              textShadow: '0 4px 20px rgba(0,0,0,0.6)'
+            }}
+          >
+            {year}
+          </h1>
+        </hgroup>
       </div>
 
       {/* Flechas de Scroll Indicator */}

@@ -26,6 +26,7 @@ export default async function YearPage({ params }) {
   const dict = await getDictionary(lang);
   
   const yearData = dict.years?.[year];
+  const yearSubtitle = lang === 'es' ? 'AÑO' : 'YEAR';
 
   const breadcrumbItems = [
     { label: dict.navigation.home, href: '/' },
@@ -37,7 +38,7 @@ export default async function YearPage({ params }) {
     <main className="min-h-screen bg-white font-sans relative">
       <Breadcrumbs items={breadcrumbItems} light={true} />
 
-      <YearPortada year={year} />
+      <YearPortada year={year} subtitle={yearSubtitle} />
       
       <div className="max-w-6xl mx-auto px-6 py-24 flex flex-col items-center">
         {yearData ? (
@@ -58,8 +59,8 @@ export default async function YearPage({ params }) {
                     link.active ? (
                       <Link 
                         key={lIdx}
-                        // Nota: href ahora incluye el prefijo de la década si no es externo
-                        href={link.external ? link.href : `/${lang}/decadas/${decade}${link.href}`}
+                        // CONSTRUCCIÓN DE URL CORREGIDA:
+                        href={link.external ? link.href : `/${lang}/decadas/${decade}/${year}${link.href}`}
                         target={link.external ? "_blank" : "_self"}
                         rel={link.external ? "noopener noreferrer" : ""}
                         className="group relative grid grid-cols-[40px_1fr_40px] items-center px-6 py-5 bg-[#8C0DC2] text-white text-[11px] md:text-xs font-bold uppercase tracking-[0.2em] rounded-sm shadow-xl hover:bg-[#791E8F] hover:scale-[1.02] active:scale-95 transition-all border border-white/20 w-full md:w-[800px]"

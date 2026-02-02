@@ -5,7 +5,7 @@ export const year1976 = {
       links: [
         { 
           text: "ÍNDICE CRONOLÓGICO DE EVENTOS", 
-          href: "/cronologia/1976/eventos", 
+          href: "/eventos", // Simplificado para la nueva ruta anidada
           active: true 
         },
         { 
