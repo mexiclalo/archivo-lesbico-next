@@ -1,0 +1,16 @@
+export const memoriam = {
+  archiveName: "HISTORICAL ARCHIVE OF THE FEMINIST LESBIAN MOVEMENT IN MEXICO,",
+  archiveSubtitle: "Yan María Yaoyólotl (AHMFLM-YMY)",
+  title: "IN MEMORIAM",
+  subtitle: "ALAÍDE FOPPA",
+  altPhoto: "Photo of Alaíde Foppa",
+  intro: `Through the offering of her own life, <span class="font-bold">Alaíde Foppa</span> represents for lesbian-feminists of socialist orientation, the most sensitive expression of the struggle against phallopatriarchal sexist domination, but also imperialist and racist. Therefore, it is irrelevant that she was heterosexual; what matters is that she loved women and fought for their emancipation… and this is true lesbian-feminist love.`,
+  date: `Day of the immortality of <span class="font-bold">Alaíde Foppa</span>, December 19, 1980.`,
+  question: `WHO IS ALAÍDE FOPPA?`,
+  bio1: `<span class="font-bold">Alaíde constitutes for Mexican feminists the symbol of congruence and feminist commitment, not only due to her struggle for the emancipation of women but also of indigenous nations and peoples subjected to imperialism.</span>`,
+  bio2: `<span class="font-bold">Alaíde Foppa</span> was one of the most important initiators of feminism in Mexico at the beginning of the 1970s. She was born in Barcelona, lived in Argentina, Belgium, Italy, and became a naturalized Guatemalan like her mother; furthermore, she lived in Mexico as a political exile with her family until her death. She was a professor at the Faculties of Philosophy and Letters and of Political and Social Sciences at UNAM, initiating the first women's studies.`,
+  bio3: `In 1972 she inaugurated the first radio program about women, a fundamental promoter of feminism in Mexico, and in 1976 she was the founder of the feminist magazine FEM with Margarita García, the first formal feminist magazine in Latin America, among other important contributions to feminism.`,
+  bio4: `<span class="font-bold">Alaíde</span>, the aristocrat, was part of a family of revolutionaries. Her husband was the founder of the Guatemalan Party of Labour who, due to the persecution of military dictatorships, was forced into exile in Mexico. Three of her five children committed themselves to the struggle of the armed people in the Guatemalan guerrilla, to combat the military dictatorships that protected US strategic interests and the European multinationals that seized Guatemala's wonderful natural resources, enslaving the indigenous population.`,
+  bio5: `<span class="font-bold">On December 19, 1980, during a trip she made to Guatemala, the military government of Romero Lucas García, at the direction of the US CIA, ordered her kidnapping, torture, and subsequent murder.</span> International organizations, intellectuals, and feminists from France, the United States, and Mexico demanded she be returned alive; they were not successful.`,
+  bio6: `<span class="font-bold">Alaíde</span> passed into immortality before seeing the decomposition and corruption, at the beginning of the 80s, of many of the same feminists with whom she started the movement in Mexico, except for honorable exceptions.`
+};

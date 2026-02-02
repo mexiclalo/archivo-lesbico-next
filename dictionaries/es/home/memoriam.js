@@ -1,0 +1,16 @@
+export const memoriam = {
+  archiveName: "ARCHIVO HISTÓRICO DEL MOVIMIENTO FEMINISTA DE LESBIANAS EN MÉXICO,",
+  archiveSubtitle: "Yan María Yaoyólotl (AHMFLM-YMY)",
+  title: "IN MEMORIAM",
+  subtitle: "ALAÍDE FOPPA",
+  altPhoto: "Foto de Alaíde Foppa",
+  intro: `Con el ofrecimiento de su propia vida, <span class="font-bold">Alaíde Foppa</span> representa para las lesbofeministas, de orientación socialista, la expresión más sensible de la lucha contra la dominación falopatriarcal sexista, pero también imperialista y racista. Por ello, es irrelevante que fuera heterosexual, lo importante es que amaba a las mujeres y luchaba por su emancipación… y este es el verdadero amor lesbofeminista.`,
+  date: `Día de la inmortalidad de <span class="font-bold">Alaíde Foppa</span>, 19 de diciembre de 1980.`,
+  question: `¿QUIÉN ES ALAÍDE FOPPA?`,
+  bio1: `<span class="font-bold">Alaíde constituye para las feministas mexicanas el símbolo de la congruencia y el compromiso feminista, no solo debido a su lucha por la emancipación de las mujeres sino también, de las naciones indígenas y de los pueblos sometidos al imperialismo.</span>`,
+  bio2: `<span class="font-bold">Alaíde Foppa</span> fue una de las iniciadoras más importantes del feminismo en México al comienzo de la década 1970. Nació en Barcelona, vivió en Argentina, Bélgica, Italia y se nacionalizó guatemalteca como su madre, además, vivió en México como exiliada política con su familia hasta su fallecimiento. Fue docente de las facultades de Filosofía y Letras y de Ciencias Políticas y Sociales de la UNAM iniciando los primeros estudios de la mujer.`,
+  bio3: `En 1972 inauguró el primer programa de radio sobre la mujer, fundamental promotor del feminismo en México, y en 1976 fue la fundadora de la revista feminista FEM con Margarita García, la primera revista formal feminista de Latinoamérica, entre otras importantes aportaciones al feminismo.`,
+  bio4: `<span class="font-bold">Alaíde</span>, la aristócrata, formó parte de una familia de revolucionarios. Su esposo fue fundador del Partido Guatemalteco del Trabajo quien, debido a la persecución de las dictaduras militares, se vio forzado a exiliarse en México. Tres de sus cinco hijos se comprometieron con la lucha del pueblo armado en la guerrilla guatemalteca, para combatir a las dictaduras militares que protegían los intereses estratégicos estadounidenses y a las transnacionales europeas que se apoderaron de los maravillosos recursos naturales de Guatemala, esclavizando a la población indígena.`,
+  bio5: `<span class="font-bold">El 19 de diciembre de 1980 en un viaje que realizó a Guatemala, el gobierno militar de Romero Lucas García, por indicación de la CIA estadounidense, ordenó su secuestro, tortura y posterior asesinato.</span> Organismos internacionales, intelectuales y feministas de Francia, Estados Unidos y México exigieron que fuera devuelta con vida, no tuvieron éxito.`,
+  bio6: `<span class="font-bold">Alaíde</span> pasó a la inmortalidad antes de ver la descomposición y corrupción, al comenzar la década de los 80, de muchas de las mismas feministas con las que inició el movimiento en México salvo honorables excepciones.`
+};

@@ -15,7 +15,7 @@ export default function Cronologia({ t }) {
 
   // Configuración de años activos
   const purpleYears = ["1976", "1977"];
-  const lilacYears = []; // Aquí añadiremos los años que decidas marcar en lila
+  const lilacYears = []; 
 
   const rows = [
     { decade: "1970", years: ["---", "---", "---", "---", "---", "---", "1976", "1977", "1978", "1979"] },
@@ -69,7 +69,7 @@ export default function Cronologia({ t }) {
         </div>
 
         {/* TABLA CRONOLÓGICA */}
-        <div className="w-full overflow-x-auto">
+        <div className="w-full overflow-x-auto mb-16">
           <div className="min-w-[800px] border border-zinc-200 bg-white rounded-sm shadow-sm">
             {/* Headers */}
             <div className="flex border-b border-zinc-200 bg-zinc-50/50 font-bold text-xs tracking-widest uppercase py-4">
@@ -121,6 +121,11 @@ export default function Cronologia({ t }) {
             ))}
           </div>
         </div>
+
+        {/* Texto Pendiente Sutil Dinámico */}
+        <p className="w-full text-center text-xs md:text-sm italic opacity-40 uppercase tracking-widest pt-8 border-t border-zinc-200">
+          {t.pendingText}
+        </p>
 
       </div>
     </section>
