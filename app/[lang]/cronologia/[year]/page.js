@@ -23,7 +23,6 @@ export default async function YearPage({ params }) {
   
   const yearData = dict.years?.[year];
 
-  // Configuración de Migas de Pan
   const breadcrumbItems = [
     { label: dict.navigation.home, href: '/' },
     { label: year, href: null }
@@ -31,7 +30,6 @@ export default async function YearPage({ params }) {
 
   return (
     <main className="min-h-screen bg-white font-sans relative">
-      {/* Migas de pan sobre la portada */}
       <Breadcrumbs items={breadcrumbItems} light={true} />
 
       <YearPortada year={year} />
@@ -55,7 +53,9 @@ export default async function YearPage({ params }) {
                     link.active ? (
                       <Link 
                         key={lIdx}
-                        href={`/${lang}${link.href}`}
+                        href={link.external ? link.href : `/${lang}${link.href}`}
+                        target={link.external ? "_blank" : "_self"}
+                        rel={link.external ? "noopener noreferrer" : ""}
                         className="group relative grid grid-cols-[40px_1fr_40px] items-center px-6 py-5 bg-[#8C0DC2] text-white text-[11px] md:text-xs font-bold uppercase tracking-[0.2em] rounded-sm shadow-xl hover:bg-[#791E8F] hover:scale-[1.02] active:scale-95 transition-all border border-white/20 w-full md:w-[800px]"
                       >
                         <span className="text-xl group-hover:translate-x-1 transition-transform text-left">➤</span>

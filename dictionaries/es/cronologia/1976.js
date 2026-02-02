@@ -20,8 +20,9 @@ export const year1976 = {
       links: [
         { 
           text: "Presentación en PowerPoint del grupo Ákratas y Marcela Olavarrieta", 
-          href: "/documentos/1976-akratas", 
-          active: true 
+          href: "/cronologia/1976/pdf/22-PRESENTACION--EN-POWER-POINT-DE-GRUPO-AKRATAS-Y-MARCELA-OLAVARRIETA-1.pdf", 
+          active: true,
+          external: true
         }
       ]
     }

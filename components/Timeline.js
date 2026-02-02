@@ -2,8 +2,18 @@
 
 import React from 'react';
 
-export default function Timeline({ data, year }) {
+export default function Timeline({ data, year, ui }) {
   if (!data || !Array.isArray(data)) return null;
+
+  // Fallback por si ui no viene cargado
+  const labels = ui || {
+    authors: "Autoras",
+    source: "Fuente",
+    downloadPdf: "Descargar PDF",
+    document: "Documento",
+    video: "Video Documental",
+    noImage: "Sin imagen"
+  };
 
   const basePath = `/cronologia/${year}`;
 
@@ -52,7 +62,6 @@ export default function Timeline({ data, year }) {
         }
 
         // 3. RENDERIZADO DE FICHA DE ARCHIVO
-        // Modificado para detectar NUMERO o NUMERO_MES
         const itemNumber = item.NUMERO || item.NUMERO_MES;
         
         if (itemNumber) {
@@ -61,13 +70,13 @@ export default function Timeline({ data, year }) {
               {item.FECHA && <p className="text-sm font-black text-[#740EBD] uppercase tracking-tighter">{item.FECHA}</p>}
               {item.AUTORAS && (
                 <div className="space-y-1">
-                  <span className="text-[10px] uppercase font-bold text-zinc-400 block tracking-widest">Autoras</span>
+                  <span className="text-[10px] uppercase font-bold text-zinc-400 block tracking-widest">{labels.authors}</span>
                   <p className="text-xs md:text-sm text-zinc-800 font-medium leading-tight">{item.AUTORAS}</p>
                 </div>
               )}
               {item.FUENTE && (
                 <div className="space-y-1">
-                  <span className="text-[10px] uppercase font-bold text-zinc-400 block tracking-widest">Fuente</span>
+                  <span className="text-[10px] uppercase font-bold text-zinc-400 block tracking-widest">{labels.source}</span>
                   <div 
                     className="text-xs md:text-sm text-zinc-600 italic leading-snug break-words"
                     dangerouslySetInnerHTML={{ __html: item.FUENTE }}
@@ -79,8 +88,6 @@ export default function Timeline({ data, year }) {
 
           return (
             <article key={`item-${index}`} className="w-full bg-white border-b border-[#740EBD]/20">
-              
-              {/* VISTA MÓVIL */}
               <div className="md:hidden w-full bg-zinc-100 p-8 text-center space-y-6 border-b border-zinc-200">
                 <h4 className="text-lg font-bold text-[#740EBD] uppercase tracking-wider leading-tight">
                   {item.TITULO_COMENTARIOS}
@@ -90,7 +97,6 @@ export default function Timeline({ data, year }) {
 
               <div className="flex flex-col md:flex-row w-full">
                 
-                {/* COLUMNA 1: IMÁGENES Y MULTIMEDIA */}
                 <div className="w-full md:w-[35%] p-6 flex flex-col items-center justify-center bg-white md:bg-zinc-50/30 space-y-6 order-2 md:order-1">
                   {item.NOMBRE_PARA_IMAGENES ? (
                     <div className="space-y-4 w-full flex flex-col items-center">
@@ -105,7 +111,7 @@ export default function Timeline({ data, year }) {
                       ))}
                     </div>
                   ) : (
-                    <div className="text-zinc-300 italic text-xs">[ Sin imagen ]</div>
+                    <div className="text-zinc-300 italic text-xs">[ {labels.noImage} ]</div>
                   )}
 
                   {item.PDF === 1 && (
@@ -115,13 +121,13 @@ export default function Timeline({ data, year }) {
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 px-4 py-2 bg-red-700 text-white text-[10px] font-bold uppercase tracking-widest rounded-sm hover:bg-red-800 transition-colors shadow-sm"
                     >
-                      <i className="fas fa-file-pdf"></i> Descargar PDF
+                      <i className="fas fa-file-pdf"></i> {labels.downloadPdf}
                     </a>
                   )}
 
                   {item.VIDEOS === 1 && (
                     <div className="w-full space-y-2">
-                      <p className="text-[10px] uppercase font-bold text-center text-zinc-400">Video Documental</p>
+                      <p className="text-[10px] uppercase font-bold text-center text-zinc-400">{labels.video}</p>
                       <video controls className="w-full shadow-lg border border-zinc-200">
                         <source src={`${basePath}/video/${item.NOMBRE_PARA_IMAGENES}-1.mp4`} type="video/mp4" />
                         Tu navegador no soporta video.
@@ -130,12 +136,10 @@ export default function Timeline({ data, year }) {
                   )}
                 </div>
 
-                {/* COLUMNA 2 (SOLO ESCRITORIO): DATOS TÉCNICOS */}
                 <div className="hidden md:flex md:w-[20%] p-8 flex-col items-center justify-center text-center bg-[#740EBD]/5 border-x border-[#740EBD]/10 order-2">
                   <TechnicalData />
                 </div>
 
-                {/* COLUMNA 3: RELATO */}
                 <div className="w-full md:w-[45%] p-10 md:p-16 flex flex-col justify-center bg-white order-3">
                   <h4 className="hidden md:block text-xl md:text-2xl font-bold text-[#740EBD] mb-8 leading-snug">
                     {item.TITULO_COMENTARIOS}

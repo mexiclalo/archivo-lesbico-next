@@ -25,18 +25,21 @@ export const year1977 = {
       links: [
         { 
           text: "Homosexualidad, lesbianismo y su significación social", 
-          href: "/documentos/1977-homosexualidad", 
-          active: true 
+          href: "/cronologia/1977/pdf/11.04-ARCHIVO-DE-LESBIANAS-FEMINISTAS-MEXICO-1977-DOCUMENTO-BASE-DE-LA-PONENCIA-PRESENTADA-EN-EL-SIMPOSIO-1.pdf", 
+          active: true,
+          external: true
         },
         { 
           text: "Documentos del Primer Simposio Mexicano-Centroamericano de Investigación Sobre la Mujer", 
-          href: "/documentos/1977-simposio", 
-          active: true 
+          href: "/cronologia/1977/pdf/Documentos-de-el-Primer-Simposio-Mexicano-Centroamericano-de-Investigacion-sobre-la-Mujer.pdf", 
+          active: true,
+          external: true
         },
         { 
           text: "Una experiencia dentro de los Grupos Lésbicos en México, década 70, Lesbos y Oikabeth", 
-          href: "/documentos/1977-experiencia", 
-          active: true 
+          href: "/cronologia/1977/pdf/Una-expreriencia-dentro-de-los-Grupos-Lesbicos-en-Mexico,-decada-70-Lesbos-y-Oikabeth.pdf", 
+          active: true,
+          external: true
         }
       ]
     }

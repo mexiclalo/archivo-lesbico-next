@@ -1,4 +1,5 @@
 import { navigation } from './navigation';
+import { ui } from './ui';
 import { portada } from './home/portada';
 import { coyolxauhqui } from './home/coyolxauhqui';
 import { bandera } from './home/bandera';
@@ -12,12 +13,13 @@ import { indoafroasiaPortal } from './home/indoafroasiaPortal';
 import { eventosPortal } from './home/eventosPortal';
 import { footer } from './home/footer';
 
-// Importación de años
 import { year1976 } from './cronologia/1976';
 import { year1977 } from './cronologia/1977';
+import { decade1970 } from './decadas/1970';
 
 export const en = {
   navigation,
+  ui,
   home: {
     portada,
     coyolxauhqui,
@@ -35,5 +37,8 @@ export const en = {
   years: {
     "1976": year1976,
     "1977": year1977
+  },
+  decadasData: {
+    "1970": decade1970
   }
 };

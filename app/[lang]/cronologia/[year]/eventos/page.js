@@ -17,15 +17,23 @@ export async function generateStaticParams() {
   return params;
 }
 
-async function getYearData(year) {
+async function getYearData(year, lang) {
   try {
-    const filePath = path.join(process.cwd(), 'data', 'cronologia', `${year}.json`);
+    const fileName = lang === 'en' ? `${year}_en.json` : `${year}.json`;
+    const filePath = path.join(process.cwd(), 'data', 'cronologia', fileName);
+    
     if (fs.existsSync(filePath)) {
       const fileContent = fs.readFileSync(filePath, 'utf8');
       return JSON.parse(fileContent);
+    } else if (lang === 'en') {
+      const esPath = path.join(process.cwd(), 'data', 'cronologia', `${year}.json`);
+      if (fs.existsSync(esPath)) {
+        const fileContent = fs.readFileSync(esPath, 'utf8');
+        return JSON.parse(fileContent);
+      }
     }
   } catch (error) {
-    console.error(`Error loading data for year ${year}:`, error);
+    console.error(`Error loading data for year ${year} in ${lang}:`, error);
   }
   return null;
 }
@@ -34,12 +42,12 @@ export default async function EventosYearPage({ params }) {
   const { lang, year } = await params;
   const dict = await getDictionary(lang);
   
-  const timelineData = await getYearData(year);
+  const timelineData = await getYearData(year, lang);
 
   const breadcrumbItems = [
     { label: dict.navigation.home, href: '/' },
     { label: year, href: `/cronologia/${year}` },
-    { label: lang === 'es' ? 'Índice de Eventos' : 'Events Index', href: null }
+    { label: lang === 'es' ? 'Eventos' : 'Events', href: null }
   ];
 
   return (
@@ -48,11 +56,11 @@ export default async function EventosYearPage({ params }) {
 
       <YearPortada year={`${year}`} />
       
-      {/* Contenedor de ancho completo para que las plecas crucen toda la pantalla */}
       <div className="w-full">
         {timelineData ? (
           <div className="w-full">
-            <Timeline data={timelineData} year={year} />
+            {/* Pasamos dict.ui para las etiquetas traducibles */}
+            <Timeline data={timelineData} year={year} ui={dict.ui} />
           </div>
         ) : (
           <div className="text-center py-20 px-6">
@@ -60,7 +68,7 @@ export default async function EventosYearPage({ params }) {
               {lang === 'es' ? 'ÍNDICE CRONOLÓGICO DE EVENTOS' : 'CHRONOLOGICAL INDEX OF EVENTS'}
             </p>
             <p className="text-zinc-300 italic mt-8">
-              {lang === 'es' ? '[ Datos no disponibles para este año ]' : '[ Data not available for this year ]'}
+              {dict.ui.noEvents}
             </p>
           </div>
         )}
