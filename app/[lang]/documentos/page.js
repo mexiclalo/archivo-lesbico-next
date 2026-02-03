@@ -1,11 +1,17 @@
 import { getDictionary } from '../../../lib/get-dictionary';
 import YearPortada from '../../../components/YearPortada';
 import Breadcrumbs from '../../../components/Breadcrumbs';
+import fs from 'fs';
+import path from 'path';
 
 export default async function DocumentosPage({ params }) {
   const { lang } = await params;
   const dict = await getDictionary(lang);
-  const data = dict.documentos;
+  const labels = dict.documentos;
+
+  const jsonPath = path.join(process.cwd(), 'data', 'documentos_relevantes.json');
+  const fileContent = fs.readFileSync(jsonPath, 'utf8');
+  const { documentos: items } = JSON.parse(fileContent);
 
   const breadcrumbItems = [
     { label: dict.navigation.home, href: '/' },
@@ -14,7 +20,7 @@ export default async function DocumentosPage({ params }) {
 
   const docBg = "https://archivolesbico.yanmaria.org/img/pantallaGrande/portada/Archivo-lesbianas-feministas-documentos-relevantes.png";
 
-  const formattedTitle = data.title.replace("AHMFLM-YMY", '<span class="whitespace-nowrap">AHMFLM-YMY</span>');
+  const formattedTitle = labels.title.replace("AHMFLM-YMY", '<span class="whitespace-nowrap">AHMFLM-YMY</span>');
 
   return (
     <main className="min-h-screen bg-white font-sans relative">
@@ -27,11 +33,10 @@ export default async function DocumentosPage({ params }) {
 
       <div className="w-full">
         
-        {/* ENCABEZADO INSTITUCIONAL */}
         <div className="max-w-7xl mx-auto px-6 pt-24 pb-20 flex flex-col items-center">
           <div className="w-full text-center space-y-2 mb-20 flex flex-col items-center">
             <p className="text-sm md:text-base font-bold uppercase tracking-widest text-zinc-800 opacity-90">
-              {data.archiveName}
+              {labels.archiveName}
             </p>
             <p className="text-xs md:text-sm font-medium tracking-[0.2em] uppercase text-zinc-600 opacity-80">
               Yan María Yaoyólotl <span className="whitespace-nowrap">(AHMFLM-YMY)</span>
@@ -51,27 +56,31 @@ export default async function DocumentosPage({ params }) {
             </div>
 
             <div className="text-base md:text-xl leading-relaxed text-justify text-zinc-800 max-w-5xl">
-              <p>{data.description}</p>
+              <p>{labels.description}</p>
             </div>
           </div>
         </div>
 
-        {/* ÍNDICE DE DOCUMENTOS */}
-        {data.items && data.items.length > 0 && (
-          <div className="max-w-7xl mx-auto px-6 mb-32">
-            <div className="bg-zinc-100 border border-zinc-200 p-8 md:p-12 rounded-sm max-w-5xl mx-auto shadow-sm">
-              <h3 className="text-sm font-black tracking-[0.3em] uppercase text-zinc-400 mb-8 border-b border-zinc-200 pb-4">
-                {data.indexTitle}
+        {/* ÍNDICE DE DOCUMENTOS TOTALMENTE CENTRADO */}
+        {items && items.length > 0 && (
+          <div className="max-w-7xl mx-auto px-6 mb-32 flex justify-center">
+            <div className="bg-zinc-100 border border-zinc-200 p-8 md:p-16 rounded-sm w-full max-w-5xl shadow-sm text-center">
+              <h3 className="text-sm font-black tracking-[0.4em] uppercase text-zinc-400 mb-12 border-b border-zinc-200 pb-6 text-center">
+                {labels.indexTitle}
               </h3>
-              <ul className="space-y-4">
-                {data.items.map((item) => (
-                  <li key={item.id}>
+              <ul className="space-y-10">
+                {items.map((item) => (
+                  <li key={item.id} className="flex flex-col items-center">
                     <a 
-                      href={`#${item.id}`}
-                      className="group flex items-start gap-3 text-xs md:text-sm font-bold uppercase tracking-wider text-[#8C0DC2] hover:text-[#791E8F] transition-colors"
+                      href={`#doc-${item.id}`}
+                      className="group flex flex-col items-center gap-1 text-[#8C0DC2] hover:text-[#791E8F] transition-all"
                     >
-                      <span>➤</span>
-                      <span className="border-b border-transparent group-hover:border-[#791E8F]">{item.title}</span>
+                      <span className="text-sm md:text-base font-bold uppercase tracking-widest border-b border-transparent group-hover:border-[#791E8F]">
+                        {item.index_title}
+                      </span>
+                      <span className="text-[11px] md:text-xs normal-case font-medium text-zinc-500 leading-relaxed text-center max-w-2xl">
+                        {item.index_subtitle}
+                      </span>
                     </a>
                   </li>
                 ))}
@@ -80,50 +89,56 @@ export default async function DocumentosPage({ params }) {
           </div>
         )}
 
-        {/* SECCIONES DE DOCUMENTOS */}
         <div className="w-full border-t border-zinc-200">
-          {data.items && data.items.map((item, idx) => (
+          {items && items.map((item, idx) => (
             <article 
               key={item.id} 
-              id={item.id}
+              id={`doc-${item.id}`}
               className={`w-full py-24 md:py-32 scroll-mt-20 border-b border-zinc-300/50 ${idx % 2 === 0 ? 'bg-white' : 'bg-zinc-100'}`}
             >
               <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row gap-12 md:gap-20 items-start">
                 
-                {/* Columna Izquierda (30%) - IMAGEN CON BORDE MORADO OSCURO */}
                 <div className="w-full md:w-[30%] shrink-0">
-                  <img 
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-auto shadow-2xl rounded-sm border-2 border-[#291147]"
-                  />
+                  {item.image && (
+                    <img 
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-auto shadow-2xl rounded-sm border-2 border-[#291147]"
+                    />
+                  )}
+                  {item.image_label && (
+                    <p 
+                      className="mt-4 text-[10px] text-center uppercase tracking-widest text-zinc-400 leading-relaxed"
+                      dangerouslySetInnerHTML={{ __html: item.image_label }}
+                    ></p>
+                  )}
                 </div>
 
-                {/* Columna Derecha (70%) */}
-                <div className="w-full md:w-[70%] space-y-8 flex flex-col items-center md:items-start">
+                <div className="w-full md:w-[70%] space-y-8 flex flex-col items-center">
                   
                   <div className="space-y-4 w-full">
+                    {/* TÍTULO REFINADO: Sans-serif (Roboto), más pequeño y compacto */}
                     <h2 
-                      className="text-2xl md:text-3xl font-bold uppercase tracking-widest text-[#791E8F] leading-tight text-center md:text-left"
-                      style={{ fontFamily: "'Playfair Display', serif" }}
+                      className="text-xl md:text-2xl font-bold uppercase tracking-wide text-[#791E8F] leading-tight text-center md:text-left"
+                      dangerouslySetInnerHTML={{ __html: item.title }}
                     >
-                      {item.title}
                     </h2>
                     
                     {item.subtitle && (
-                      <h3 className="text-base md:text-lg font-bold italic text-zinc-600 leading-relaxed border-l-4 border-[#8C0DC2]/20 pl-6 text-justify">
-                        {item.subtitle}
+                      <h3 
+                        className="text-base md:text-lg font-bold italic text-zinc-600 leading-relaxed border-l-4 border-[#8C0DC2]/20 pl-6 text-justify"
+                        dangerouslySetInnerHTML={{ __html: item.subtitle }}
+                      >
                       </h3>
                     )}
                   </div>
 
-                  <div className="text-base md:text-lg leading-relaxed text-justify text-zinc-800 space-y-6 w-full">
+                  <div className="text-base md:text-lg leading-relaxed text-zinc-800 space-y-6 w-full">
                     {item.paragraphs.map((p, pIdx) => (
-                      <p key={pIdx} dangerouslySetInnerHTML={{ __html: p }}></p>
+                      <div key={pIdx} className="text-justify" dangerouslySetInnerHTML={{ __html: p }}></div>
                     ))}
                   </div>
 
-                  {/* VIDEO CENTRADO CON BORDE MORADO OSCURO */}
                   {item.video && (
                     <div className="pt-6 w-full flex justify-center">
                       <div className="w-full max-w-2xl">
@@ -138,20 +153,53 @@ export default async function DocumentosPage({ params }) {
                     </div>
                   )}
 
+                  {item.contact && (
+                    <div className="pt-6 w-full flex flex-wrap justify-center gap-8">
+                      {item.contact.map((c, cIdx) => (
+                        <a 
+                          key={cIdx} 
+                          href={c.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs md:text-sm font-bold text-[#8C0DC2] hover:text-[#791E8F] border-b border-[#8C0DC2]/20 pb-1 transition-colors"
+                        >
+                          {c.label}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+
                   {item.links && (
-                    <div className="pt-10 w-full flex flex-wrap justify-center gap-6">
+                    <div className="pt-10 w-full flex flex-wrap justify-center gap-8">
                       {item.links.map((link, lIdx) => (
                         <a 
                           key={lIdx}
                           href={link.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="group flex items-center gap-3 px-10 py-5 bg-[#8C0DC2] text-white text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] rounded-sm shadow-xl hover:bg-[#791E8F] transition-all active:scale-95"
+                          className="group flex flex-col w-full max-w-[280px] shadow-2xl hover:scale-105 transition-all active:scale-95 bg-[#8C0DC2] rounded-sm overflow-hidden border-2 border-[#291147]"
                         >
-                          <span className="text-lg group-hover:translate-x-1 transition-transform">➤</span>
-                          <span className="text-center leading-none" dangerouslySetInnerHTML={{ __html: link.label }}></span>
+                          {link.img && (
+                            <div className="w-full aspect-[3/4] overflow-hidden border-b-2 border-[#291147]">
+                              <img src={link.img} className="w-full h-full object-cover" alt="" />
+                            </div>
+                          )}
+                          
+                          <div className="flex items-center justify-center gap-3 px-6 py-5 text-white">
+                            <span className="text-lg group-hover:translate-x-1 transition-transform">➤</span>
+                            <span className="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-center leading-tight" dangerouslySetInnerHTML={{ __html: link.label }}></span>
+                          </div>
                         </a>
                       ))}
+                    </div>
+                  )}
+
+                  {item.footnote && (
+                    <div className="pt-10 w-full text-center">
+                      <p 
+                        className="text-[10px] md:text-xs italic text-zinc-400 max-w-2xl mx-auto" 
+                        dangerouslySetInnerHTML={{ __html: item.footnote }}
+                      ></p>
                     </div>
                   )}
                 </div>
