@@ -194,6 +194,7 @@ export default async function DocumentosPage({ params }) {
                     </div>
                   )}
 
+                  {/* NOTA AL PIE CENTRADA */}
                   {item.footnote && (
                     <div className="pt-10 w-full text-center">
                       <p 
