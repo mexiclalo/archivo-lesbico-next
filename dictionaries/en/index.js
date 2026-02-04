@@ -18,6 +18,15 @@ import { year1977 } from './cronologia/1977';
 import { decade1970 } from './decadas/1970';
 import { documentos } from './documentos';
 
+// Estructura modular completa para Indoafroasia
+import { intro as indoIntro } from './indoafroasia/index';
+import { argentina as indoArgentina } from './indoafroasia/argentina';
+import { bolivia as indoBolivia } from './indoafroasia/bolivia';
+import { brasil as indoBrasil } from './indoafroasia/brasil';
+import { chile as indoChile } from './indoafroasia/chile';
+import { costaRica as indoCostaRica } from './indoafroasia/costa-rica';
+import { peru as indoPeru } from './indoafroasia/peru';
+
 export const en = {
   navigation,
   ui,
@@ -42,5 +51,14 @@ export const en = {
   decadasData: {
     "1970": decade1970
   },
-  documentos
+  documentos,
+  indoafroasia: {
+    intro: indoIntro,
+    argentina: indoArgentina,
+    bolivia: indoBolivia,
+    brasil: indoBrasil,
+    chile: indoChile,
+    costaRica: indoCostaRica,
+    peru: indoPeru
+  }
 };
