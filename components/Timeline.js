@@ -14,7 +14,8 @@ export default function Timeline({ data, year, ui }) {
     noImage: "Sin imagen"
   };
 
-  const basePath = `/cronology/${year}`;
+  // CORRECCIÓN: La ruta correcta es cronologia, no cronology
+  const basePath = `/cronologia/${year}`;
 
   const item2 = data.find(item => item.ID === 2);
   const item3 = data.find(item => item.ID === 3);
@@ -61,10 +62,11 @@ export default function Timeline({ data, year, ui }) {
       {data.map((item, index) => {
         if (item.ID === 1 || item.ID === 2 || item.ID === 3) return null;
 
-        // 1. RENDERIZADO DE PLECAS
+        // 1. RENDERIZADO DE PLECAS RESTANTES (4 a 8)
         for (let i = 4; i <= 8; i++) {
           const plecaKey = `PLECAS_TITULOS_${i}`;
           if (item[plecaKey] && item[plecaKey].trim() !== "") {
+            
             let plecaClasses = "w-full py-12 px-6 text-center tracking-[0.2em] uppercase ";
             let plecaStyle = { fontFamily: "'Playfair Display', serif" };
 
@@ -86,7 +88,7 @@ export default function Timeline({ data, year, ui }) {
           }
         }
 
-        // 2. RENDERIZADO DE MESES
+        // 2. RENDERIZADO DE MESES (Fondo Color Catálogo #1a0a33)
         if (item.PLECA_MESES && item.PLECA_MESES.trim() !== "") {
           return (
             <div key={`mes-${index}`} className="w-full py-12 bg-[#1a0a33] text-center px-6">
@@ -124,6 +126,7 @@ export default function Timeline({ data, year, ui }) {
 
           return (
             <article key={`item-${index}`} className="w-full bg-white border-b border-[#740EBD]/10">
+              
               <div className="md:hidden w-full bg-zinc-50 p-8 text-center space-y-6 border-b border-zinc-100">
                 <h4 className="text-lg font-bold text-[#740EBD] uppercase tracking-wider leading-tight">
                   {item.TITULO_COMENTARIOS}

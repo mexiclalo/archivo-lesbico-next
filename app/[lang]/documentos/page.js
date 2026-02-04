@@ -9,7 +9,8 @@ export default async function DocumentosPage({ params }) {
   const dict = await getDictionary(lang);
   const labels = dict.documentos;
 
-  const jsonPath = path.join(process.cwd(), 'data', 'documentos_relevantes.json');
+  const fileName = lang === 'en' ? 'documentos_relevantes_en.json' : 'documentos_relevantes.json';
+  const jsonPath = path.join(process.cwd(), 'data', fileName);
   const fileContent = fs.readFileSync(jsonPath, 'utf8');
   const { documentos: items } = JSON.parse(fileContent);
 
