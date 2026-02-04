@@ -41,7 +41,6 @@ export default async function CountryPage({ params }) {
     <main className="min-h-screen bg-white font-sans relative">
       <Breadcrumbs items={breadcrumbItems} light={true} />
       
-      {/* Portada con el parámetro attribution conectado al diccionario */}
       <YearPortada 
         title={countryData.title} 
         subtitle={countryData.subtitle}
@@ -96,6 +95,17 @@ export default async function CountryPage({ params }) {
                   dangerouslySetInnerHTML={{ __html: countryData.introduction.fullText }}
                 ></div>
               )}
+
+              {/* IMAGEN ADICIONAL AL FINAL DE LA INTRO (Solo si existe) */}
+              {countryData.introduction.introImageBottom && (
+                <div className="w-full pt-8 flex justify-center">
+                  <img 
+                    src={countryData.introduction.introImageBottom} 
+                    className="w-full max-w-5xl h-auto shadow-2xl rounded-sm border border-zinc-100"
+                    alt="Imagen complementaria"
+                  />
+                </div>
+              )}
             </div>
           </section>
         )}
@@ -127,9 +137,9 @@ export default async function CountryPage({ params }) {
                 </div>
 
                 <div className="w-full md:w-[70%] space-y-8 flex flex-col items-center">
-                  <div className="space-y-4 w-full">
+                  <div className="space-y-4 w-full text-left">
                     <h2 
-                      className="text-xl md:text-2xl font-bold uppercase tracking-wide text-[#791E8F] leading-tight text-center md:text-left"
+                      className="text-xl md:text-2xl font-bold uppercase tracking-wide text-[#791E8F] leading-tight"
                       dangerouslySetInnerHTML={{ __html: item.title }}
                     >
                     </h2>
